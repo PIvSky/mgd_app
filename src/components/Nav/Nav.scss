@@ -1,0 +1,57 @@
+// NavLink i an <a> tag in HTML
+
+/* 
+SMALL SCREEN 
+*/
+
+.header {
+    .nav-container {
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        margin: auto;
+        height: 100vh;
+        width: 100%;
+        transition: 1.5s;
+        // transform: translateY(-100vh);
+        .nav-list {
+            padding: 70px 39px;
+            &__element {
+                padding-bottom: 14px;
+                list-style: none;
+                text-decoration: none;
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+
+                // a.active {
+                //     color: map-get(colors, secondary );
+                //     border-bottom: 2px solid black;
+                // }
+            }
+        }
+    }
+
+    .close-circle__button {
+        position: absolute;
+        top: 19px;
+        right: 23px;
+        width: 53px;
+        height: 53px;
+        background-color: black;
+        border-radius: 50%;
+        border: none;
+        // TODO: Box shadow
+        span {
+            color: white;
+            scale: 1.5;
+        }
+    }
+
+    .responsive_nav {
+        transform: none;
+    }
+}
