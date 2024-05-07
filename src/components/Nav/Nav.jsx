@@ -14,50 +14,44 @@ const Nav = () => {
           });
     }
 
+    const NavList = [
+        { 
+            element: 'o nas',
+            adress: 'about'
+        },
+        { 
+            element: 'oferta',
+            adress: '/offer'
+        },
+        { 
+            element: 'succes story',
+            adress: '/succes-story'
+        },
+        { 
+            element: 'blog',
+            adress: '/blog'
+        },
+        { 
+            element: 'kontakt',
+            adress: '/contact'
+        }
+    ]
+
     return (
       <header className="header">
         <nav className="nav-container" ref={navRef}>
             <ul className="nav-list">
-                <li className="nav-list__element">
-                    <NavLink
-                        to
-                        className={({ isActive }) => (isActive ? 'active' : '')}
-                        onClick={showNavbar}
-                    >o nas
-                    </NavLink>
-                </li>
-                <li className="nav-list__element">
-                    <NavLink
-                        to
-                        className={({ isActive }) => (isActive ? 'active' : '')}
-                        onClick={showNavbar}
-                    >oferta
-                    </NavLink>
-                </li>
-                <li className="nav-list__element">
-                    <NavLink
-                        to
-                        className={({ isActive }) => (isActive ? 'active' : '')}
-                        onClick={showNavbar}
-                    >succes story
-                    </NavLink>
-                </li>
-                <li className="nav-list__element">
-                    <NavLink
-                        to
-                        className={({ isActive }) => (isActive ? 'active' : '')}
-                        onClick={showNavbar}
-                    >blog
-                    </NavLink>
-                </li>
-                <li className="nav-list__element">
-                    <NavLink
-                        to
-                        className={({ isActive }) => (isActive ? 'active' : '')}
-                        onClick={showNavbar}
-                    >kontakt
-                    </NavLink>
-                </li>
+                {NavList.map((item, index) => (
+                    <li className="nav-list__element" key={index}>
+                        <NavLink
+                            to={item.adress}
+                            className={({ isActive }) => (isActive ? 'active' : '')}
+                            onClick={showNavbar}
+                        >{item.element}
+                        </NavLink>
+                    </li>
+                ))
+                }
             </ul>
             <button className="close-circle__button">
                 <span class="material-symbols-outlined">close</span>

@@ -1,3 +1,4 @@
+@import '../../styles/colors';
 // NavLink i an <a> tag in HTML
 
 /* 
@@ -25,12 +26,13 @@ SMALL SCREEN
                 a {
                     text-transform: uppercase;
                     text-decoration: none;
+                    color: black;
                 }
 
-                // a.active {
-                //     color: map-get(colors, secondary );
-                //     border-bottom: 2px solid black;
-                // }
+                a.active {
+                    color: map-get($colors, secondary );
+                    border-bottom: 2px solid black;
+                }
             }
         }
     }

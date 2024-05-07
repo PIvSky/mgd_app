@@ -21,7 +21,7 @@ const websiteRoutes = createBrowserRouter([
       { path: '/offer', element: <Offer/>},
       { path: '/succes-story', element: <SuccesStory/>},
       { path: '/blog', element: <Blog/>},
-      { path: '/Contact', element: <Contact/>}
+      { path: '/contact', element: <Contact/>}
     ],
   }
 ])
