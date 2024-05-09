@@ -19,7 +19,6 @@ const Nav = () => {
 
     const showNavbar = () => {
         navRef.current.classList.toggle('responsive_nav')
-        // Scrolling to top of the page
         window.scrollTo({
             top: 0,
           });
@@ -78,9 +77,11 @@ const Nav = () => {
                             onClick={() => {
                                 if (item.element === 'oferta') {
                                     handleClick();
+                                } else if (item.element != 'oferta') {
+                                    setIsOfferClicked(false)
+                                    menuTranformation()
+                                    showNavbar();
                                 }
-                                {/* TODO: zmień logikę - po kliknięciu w oferta nav nie może się zwijać */}
-                                showNavbar();
                             }}
                         >{item.element}
                         </NavLink>
@@ -90,7 +91,10 @@ const Nav = () => {
                                 <p 
                                     className='offer-container__element' 
                                     key={index}
-                                    onClick={showNavbar}
+                                    onClick={() => {
+                                        showNavbar();
+                                        menuTranformation();
+                                        }}
                                 >{item.element}
                                 </p>
                             ))}
@@ -101,10 +105,8 @@ const Nav = () => {
                 ))
                 }
             </ul>
+            {/* TODO: here add background-asset */}
         </nav>
-        {/* <button onClick={showNavbar} className="close-circle__button">
-            <span class="material-symbols-outlined">close</span>
-        </button> */}
         <button onClick={showNavbar} className="hamburger-box">
             <div className='hamburger-inner' onClick={menuTranformation} ref={buttonRef}>
                 <div className='hamburger-top__bun'></div>
