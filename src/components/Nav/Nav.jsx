@@ -1,10 +1,15 @@
-import {useRef} from 'react'
+import {useRef, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import './Nav.scss'
 
 const Nav = () => {
 
+    const [isOfferClicked, setIsOfferClicked] = useState(false);
     const navRef = useRef();
+
+    const handleClick = () => {
+        setIsOfferClicked(true);
+    };
 
     const showNavbar = () => {
         navRef.current.classList.toggle('responsive_nav')
@@ -37,6 +42,24 @@ const Nav = () => {
         }
     ]
 
+    const OfferContent = [
+        {
+            element: 'dla nowo otwieranych biznesów'
+        },
+        {
+            element: 'dla instniejących biznesów'
+        },
+        {
+            element: 'IMPLEMENTACJA NOWOCZESNYCH NARZĘDZI BIZNESOWYCH'
+        },
+        {
+            element: 'BADANIA RYNKU I TRENDY'
+        },
+        {
+            element: 'PROJECT MANAGEMENT USŁUG BUDOWLANO-WYKOŃCZENIOWYCH'
+        },
+    ]
+
     return (
       <header className="header">
         <nav className="nav-container" ref={navRef}>
@@ -46,9 +69,26 @@ const Nav = () => {
                         <NavLink
                             to={item.adress}
                             className={({ isActive }) => (isActive ? 'active' : '')}
-                            onClick={showNavbar}
+                            onClick={() => {
+                                if (item.element === 'oferta') {
+                                    handleClick();
+                                }
+                                showNavbar();
+                            }}
                         >{item.element}
                         </NavLink>
+                        {isOfferClicked && item.element === 'oferta' && (
+                        <div className="offer-container">
+                            {OfferContent.map((item, index) => (
+                                <p 
+                                    className='offer-container__element' 
+                                    key={index}
+                                    onClick={showNavbar}
+                                >{item.element}
+                                </p>
+                            ))}
+                        </div>
+                    )}
                     </li>
                 ))
                 }

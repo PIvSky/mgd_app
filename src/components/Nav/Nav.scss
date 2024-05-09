@@ -1,4 +1,7 @@
+@use '../../styles/typography';
+
 @import '../../styles/colors';
+// TODO: check: can I import maps of colors with @use instead of @import?
 // NavLink i an <a> tag in HTML
 
 /* 
@@ -7,7 +10,7 @@ SMALL SCREEN
 
 .header {
     .nav-container {
-        z-index: 5;
+        z-index: 100;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -26,12 +29,27 @@ SMALL SCREEN
                 a {
                     text-transform: uppercase;
                     text-decoration: none;
-                    color: black;
+                    padding-right: 1px;
+                    color: map-get($colors, black );
+                    @include typography.nav-mobile;
                 }
 
                 a.active {
-                    color: map-get($colors, secondary );
-                    border-bottom: 2px solid black;
+                    color: map-get($colors, orange );
+                    border-bottom: 3px solid black;
+                }
+            }
+            .offer-container {
+                padding: 1px 40px 0px;
+                text-transform: uppercase;
+
+                &__element {
+                    padding: 10px 0px 10px 10px;
+                    line-height: 17px;
+                    letter-spacing: 1px;
+                    @include typography.nav-mobile;
+                    border-left: 3px solid black;
+                    border-bottom: 3px solid black;
                 }
             }
         }
