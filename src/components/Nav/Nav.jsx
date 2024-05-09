@@ -6,6 +6,12 @@ const Nav = () => {
 
     const [isOfferClicked, setIsOfferClicked] = useState(false);
     const navRef = useRef();
+    const buttonRef = useRef();
+
+    // Hamburger menu action 
+    const menuTranformation = () => {
+        buttonRef.current.classList.toggle('open');
+    }
 
     const handleClick = () => {
         setIsOfferClicked(true);
@@ -73,6 +79,7 @@ const Nav = () => {
                                 if (item.element === 'oferta') {
                                     handleClick();
                                 }
+                                {/* TODO: zmień logikę - po kliknięciu w oferta nav nie może się zwijać */}
                                 showNavbar();
                             }}
                         >{item.element}
@@ -87,16 +94,24 @@ const Nav = () => {
                                 >{item.element}
                                 </p>
                             ))}
+                            
                         </div>
                     )}
                     </li>
                 ))
                 }
             </ul>
-            <button className="close-circle__button">
-                <span class="material-symbols-outlined">close</span>
-            </button>
         </nav>
+        {/* <button onClick={showNavbar} className="close-circle__button">
+            <span class="material-symbols-outlined">close</span>
+        </button> */}
+        <button onClick={showNavbar} className="hamburger-box">
+            <div className='hamburger-inner' onClick={menuTranformation} ref={buttonRef}>
+                <div className='hamburger-top__bun'></div>
+                <div className='hamburger-middle__bun'></div>
+                <div className='hamburger-bottom__bun'></div>
+            </div>
+        </button>
       </header>
     );
 }
