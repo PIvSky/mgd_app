@@ -11,7 +11,7 @@ SMALL SCREEN
 .header {
     .nav-container {
         z-index: 100;
-        background-color: map-get($colors, grey );
+        background-color: map-get($colors, white );
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -23,6 +23,7 @@ SMALL SCREEN
         transform: translateY(-100vh);
         .nav-list {
             padding: 70px 39px;
+            z-index: 50;
             &__element {
                 padding-bottom: 14px;
                 list-style: none;
@@ -53,6 +54,13 @@ SMALL SCREEN
                     border-bottom: 3px solid black;
                 }
             }
+        }
+        .bg-vector {
+            z-index: 10;
+            position: absolute;
+            top: -275px;
+            left: -445px;
+            scale: 0.65;
         }
     }
 

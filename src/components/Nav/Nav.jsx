@@ -1,6 +1,7 @@
 import {useRef, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import './Nav.scss'
+import bgVector from '../../assets/background/bg-vector-beige.png'
 
 const Nav = () => {
 
@@ -105,6 +106,7 @@ const Nav = () => {
                 ))
                 }
             </ul>
+            <img className='bg-vector' src={bgVector}></img>
             {/* TODO: here add background-asset */}
         </nav>
         <button onClick={showNavbar} className="hamburger-box">
