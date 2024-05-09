@@ -1,0 +1,56 @@
+// titles
+
+@mixin lg-title {
+    font-size: 68px;
+    font-weight: bold;
+}
+
+@mixin lg-title__mobile {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@mixin md-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+@mixin md-title__mobile {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+// content
+
+@mixin content-italic {
+    font-size: 12px;
+    font-style: italic;
+}
+
+@mixin content-regular {
+    font-size: 14px;
+}
+
+@mixin md-content {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@mixin lg-content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+// navigation
+
+@mixin nav-mobile {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 12%;
+}
+
+@mixin nav-desktop {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 12%;
+}
