@@ -4,6 +4,7 @@ import './Nav.scss'
 // image imports
 import bgVector from '../../assets/background/bg-vector-beige.png';
 import mikaLogoMobile from '../../assets/logo/mika-logo-mobile.svg';
+import mikaLogoDesktop from '../../assets/logo/mika-logo-desktop.png';
 
 const Nav = () => {
 
@@ -71,6 +72,7 @@ const Nav = () => {
     return (
       <header className="header">
         <img className='header-logo__mobile' src={mikaLogoMobile} alt='background-vector' />
+        <img className='header-logo__desktop' src={mikaLogoDesktop} alt='background-vector' />
         <nav className="nav-container" ref={navRef}>
             <ul className="nav-list">
                 {NavList.map((item, index) => (
@@ -102,9 +104,8 @@ const Nav = () => {
                                 >{item.element}
                                 </p>
                             ))}
-                            
                         </div>
-                    )}
+                        )}
                     </li>
                 ))
                 }

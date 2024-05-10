@@ -9,12 +9,16 @@ SMALL SCREEN
 */
 
 .header {
-    position: relative;
+    // position: relative;
 
     &-logo__mobile {
         position: absolute;
         top: 21px;
         left: 21px;
+    }
+
+    &-logo__desktop {
+        display: none;
     }
 
     .nav-container {
@@ -171,6 +175,62 @@ SMALL SCREEN
                 top: 18px;
                 left: 6px;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+    .header {
+        position: relative;
+        width: 100%;
+        display: flex;
+        &-logo__mobile {
+            display: none;
+        }
+
+        &-logo__desktop {
+            display: block;
+            padding-top: 25px;
+            padding-left: 35px;
+            width: 177px;
+            height: 78.821px;
+            flex-shrink: 0;
+        }
+
+        .nav-container {
+            position: relative;
+            display: flex;
+            right: 1px;
+            transform: none;
+            background-color: map-get($colors, beige );
+            height: 150px;
+            z-index: 0;
+
+            .nav-list {
+                z-index: 0; 
+                padding: 30px 34px 0px 0px;       
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+
+                &__element {
+                    a {
+                        margin-left: 71.5px;
+                        @include typography.nav-desktop;
+                        // white-space: nowrap;
+                        // TODO: before decision on text wrapping 
+                    }
+                }
+            }
+
+            .bg-vector {
+                display: none;
+            }
+        }
+
+        .hamburger-box {
+            display: none;
         }
     }
 }
