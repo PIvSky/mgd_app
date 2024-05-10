@@ -17,6 +17,10 @@ SMALL SCREEN
         left: 21px;
     }
 
+    &-logo__desktop {
+        display: none;
+    }
+
     .nav-container {
         z-index: 100;
         background-color: map-get($colors, white );
@@ -171,6 +175,60 @@ SMALL SCREEN
                 top: 18px;
                 left: 6px;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+    .header {
+        width: 100%;
+        &-logo__mobile {
+            display: none;
+        }
+
+        &-logo__desktop {
+            display: block;
+            position: absolute;
+            top: 25px;
+            left: 35px;
+            z-index: 500;
+        }
+
+        .nav-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            transform: none;
+            background-color: map-get($colors, beige );
+            height: 150px;
+            width: auto;
+
+            .nav-list {
+                z-index: 0;
+                padding-top: 30px;
+                padding-right: 34px;         
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                &__element {
+
+                    a {
+                        margin-left: 71.5px;
+                        @include typography.nav-desktop
+                        // TODO: dodaj letter spacing
+                    }
+                }
+            }
+
+            .bg-vector {
+                display: none;
+            }
+        }
+
+        .hamburger-box {
+            display: none;
         }
     }
 }
