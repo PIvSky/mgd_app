@@ -1,7 +1,58 @@
-.home-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px;
-    height: 100vh;
+@import '../../styles/typography';
+@import '../../styles/colors';
+
+
+.home {
+    padding-top: 114px;
+    width: 100svw;
+    position: relative;
+
+    &-content {
+        padding: 0px 0px 0px 38px;
+        width: 251px;
+    
+        &__element {
+            @include md-content;
+            font-size: 20px;
+        } 
+    }
+
+    &-circle__violet,
+    &-circle__violet__second,
+    &-circle__orange {
+        width: 279px;
+        height: 279px;
+        border-radius: 50%;
+    }
+
+    &-circle__violet {
+        position: absolute;
+        top: 86px;
+        left: 75%;
+        background-color: map-get($colors , violet );
+    }
+
+    &-circle__violet__second {
+        position: absolute;
+        top: 326px;
+        right: 94%;
+        background-color: map-get($colors , violet );
+    }
+
+    &-circle__orange {
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: map-get($colors , orange );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            @include md-content;
+            font-size: 26px;
+            text-align: center;
+            padding-inline: 35px;
+            color: map-get($colors, beige );
+        }
+    }
 }
