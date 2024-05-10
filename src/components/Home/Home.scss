@@ -29,11 +29,11 @@
     &-circle__violet {
         position: absolute;
         top: 86px;
-        left: 75%;
+        left: 270px;
         background-color: map-get($colors , violet );
     }
 
-    &-circle__violet__second {
+    .home-circle__violet__second {
         position: absolute;
         top: 326px;
         right: 94%;
