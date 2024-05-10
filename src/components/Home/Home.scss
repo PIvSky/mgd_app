@@ -6,10 +6,17 @@
     padding-top: 114px;
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     &-content {
         padding: 0px 0px 0px 38px;
         width: 251px;
+        @media screen and (min-width: 550px) and (max-width: 650px) {
+            padding-left: 68px;
+        }
+        @media screen and (min-width: 650px) and (max-width: 768px) {
+            padding-left: 128px;
+        }
     
         &__element {
             @include md-content;
@@ -20,7 +27,6 @@
     &-circle__violet,
     &-circle__violet__second,
     &-circle__orange {
-        overflow: hidden;
         width: 279px;
         height: 279px;
         border-radius: 50%;
@@ -29,11 +35,17 @@
     &-circle__violet {
         position: absolute;
         top: 86px;
-        left: 270px;
+        right: -180px;
         background-color: map-get($colors , violet );
+        @media screen and (min-width: 550px) and (max-width: 650px) {
+            right: -100px;
+        }
+        @media screen and (min-width: 650px) and (max-width: 768px) {
+            right: -60px;
+        }
     }
 
-    .home-circle__violet__second {
+    &-circle__violet__second {
         position: absolute;
         top: 326px;
         right: 94%;
@@ -76,4 +88,12 @@
         }
 
     }
+}
+
+@media screen and (min-width: 550px) and (max-width: 650px) {
+    .home {
+        &-circle__violet {
+            right: -100px;
+        }
+    } 
 }

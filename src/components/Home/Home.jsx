@@ -21,8 +21,8 @@ const Home = () => {
                 <p className='home-content__element'>{insertLineBreaks(content.main)}
                 </p>
             </div>
-            {/* <div className='home-circle__violet'/> */}
-            {/* <div className='home-circle__violet__second'/> */}
+            <div className='home-circle__violet'/>
+            <div className='home-circle__violet__second'/>
             <div className='home-circle__orange'>
                 <p>{content.contact}</p>
             </div>
