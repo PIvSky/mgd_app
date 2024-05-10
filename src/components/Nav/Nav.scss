@@ -9,6 +9,14 @@ SMALL SCREEN
 */
 
 .header {
+    position: relative;
+
+    &-logo__mobile {
+        position: absolute;
+        top: 21px;
+        left: 21px;
+    }
+
     .nav-container {
         z-index: 100;
         background-color: map-get($colors, white );

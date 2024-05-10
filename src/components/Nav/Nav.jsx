@@ -1,7 +1,9 @@
 import {useRef, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import './Nav.scss'
-import bgVector from '../../assets/background/bg-vector-beige.png'
+// image imports
+import bgVector from '../../assets/background/bg-vector-beige.png';
+import mikaLogoMobile from '../../assets/logo/mika-logo-mobile.svg';
 
 const Nav = () => {
 
@@ -68,6 +70,7 @@ const Nav = () => {
 
     return (
       <header className="header">
+        <img className='header-logo__mobile' src={mikaLogoMobile} alt='background-vector' />
         <nav className="nav-container" ref={navRef}>
             <ul className="nav-list">
                 {NavList.map((item, index) => (
@@ -106,7 +109,7 @@ const Nav = () => {
                 ))
                 }
             </ul>
-            <img className='bg-vector' src={bgVector}></img>
+            <img className='bg-vector' src={bgVector} alt='background-vector'></img>
             {/* TODO: here add background-asset */}
         </nav>
         <button onClick={showNavbar} className="hamburger-box">
