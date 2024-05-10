@@ -9,12 +9,14 @@ SMALL SCREEN
 */
 
 .header {
-    // position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 
     &-logo__mobile {
-        position: absolute;
-        top: 21px;
-        left: 21px;
+        padding-top: 21px;
+        padding-left: 21px;
     }
 
     &-logo__desktop {
@@ -81,10 +83,9 @@ SMALL SCREEN
     }
 
     .hamburger-box {
-        position: absolute;
         z-index: 150;
-        top: 19px;
-        right: 23px;
+        margin-top: 19px;
+        margin-right: 23px;
         width: 53px;
         height: 53px;
         background-color: black;
@@ -180,6 +181,7 @@ SMALL SCREEN
 }
 
 @media screen and (min-width: 769px) and (max-width: 1440px) {
+    
     .header {
         position: relative;
         width: 100%;

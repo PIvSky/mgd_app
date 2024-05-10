@@ -4,7 +4,7 @@
 
 .home {
     padding-top: 114px;
-    width: 100svw;
+    width: 100%;
     position: relative;
 
     &-content {
@@ -20,6 +20,7 @@
     &-circle__violet,
     &-circle__violet__second,
     &-circle__orange {
+        overflow: hidden;
         width: 279px;
         height: 279px;
         border-radius: 50%;
