@@ -3,21 +3,25 @@
 @mixin lg-title {
     font-size: 68px;
     font-weight: bold;
+    line-height: 1.25;
 }
 
 @mixin lg-title__mobile {
     font-size: 26px;
     font-weight: bold;
+    line-height: 1.25;
 }
 
 @mixin md-title {
     font-size: 36px;
     font-weight: bold;
+    line-height: 1.25;
 }
 
 @mixin md-title__mobile {
     font-size: 20px;
     font-weight: bold;
+    line-height: 1.25;
 }
 
 // content
@@ -25,20 +29,24 @@
 @mixin content-italic {
     font-size: 12px;
     font-style: italic;
+    line-height: 1.25;
 }
 
 @mixin content-regular {
     font-size: 14px;
+    line-height: 1.25;
 }
 
 @mixin md-content {
     font-size: 12px;
     font-weight: bold;
+    line-height: 1.25;
 }
 
 @mixin lg-content {
     font-size: 20px;
     font-weight: bold;
+    line-height: 1.25;
 }
 
 // navigation
@@ -47,10 +55,12 @@
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 12%;
+    line-height: 1.25;
 }
 
 @mixin nav-desktop {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 12%;
+    line-height: 1.25;
 }
