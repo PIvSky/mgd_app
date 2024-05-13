@@ -2,7 +2,7 @@ import {useRef, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import './Nav.scss'
 // image imports
-import bgVector from '../../assets/background/bg-vector-beige.png';
+import VectorBg from '../Assets/VectorBg/VectorBg';
 import mikaLogoMobile from '../../assets/logo/mika-logo-mobile.svg';
 import mikaLogoDesktop from '../../assets/logo/mika-logo-desktop.png';
 
@@ -35,7 +35,7 @@ const Nav = () => {
         },
         { 
             element: 'oferta',
-            // adress: '/offer'
+            adress: '/offer'
         },
         { 
             element: 'succes story',
@@ -110,7 +110,7 @@ const Nav = () => {
                 ))
                 }
             </ul>
-            <img className='bg-vector' src={bgVector} alt='background-vector'></img>
+            <VectorBg className='bg-vector'/>
         </nav>
         <button onClick={showNavbar} className="hamburger-box">
             <div className='hamburger-inner' onClick={menuTranformation} ref={buttonRef}>

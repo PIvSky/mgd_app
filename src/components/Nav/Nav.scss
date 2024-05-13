@@ -75,6 +75,9 @@ SMALL SCREEN
             top: -275px;
             left: -445px;
             scale: 0.65;
+            path {
+                fill: map-get($colors, beige )
+            }
         }
     }
 
