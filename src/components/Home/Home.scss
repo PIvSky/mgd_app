@@ -1,7 +1,101 @@
-.home-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px;
-    height: 100vh;
+@import '../../styles/typography';
+@import '../../styles/colors';
+@import '../../styles/z-index';
+
+.home {
+    padding-top: 114px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &-content {
+        padding: 0px 0px 0px 38px;
+        width: 251px;
+        @media screen and (min-width: 550px) and (max-width: 650px) {
+            padding-left: 68px;
+        }
+        @media screen and (min-width: 650px) and (max-width: 768px) {
+            padding-left: 128px;
+        }
+    
+        &__element {
+            @include md-content;
+            font-size: 20px;
+        } 
+    }
+
+    &-circle__violet,
+    &-circle__violet__second,
+    &-circle__orange {
+        width: 279px;
+        height: 279px;
+        border-radius: 50%;
+    }
+
+    &-circle__violet {
+        position: absolute;
+        z-index: map-get($z-index, violec-circle );
+        top: 86px;
+        right: -180px;
+        background-color: map-get($colors , violet );
+        @media screen and (min-width: 550px) and (max-width: 650px) {
+            right: -100px;
+        }
+        @media screen and (min-width: 650px) and (max-width: 768px) {
+            right: -60px;
+        }
+    }
+
+    &-circle__violet__second {
+        position: absolute;
+        top: 326px;
+        right: 94%;
+        background-color: map-get($colors , violet );
+    }
+
+    &-circle__orange {
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: map-get($colors , orange );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            @include md-content;
+            font-size: 26px;
+            text-align: center;
+            padding-inline: 35px;
+            color: map-get($colors, beige );
+        }
+    }
+
+    &-quote {
+        padding-top: 35px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        max-width: 400px;
+        p {
+            text-align: center;
+            @include content-italic;
+        }
+
+        p:nth-child(2) {
+            padding-top: 10px;
+            padding-bottom: 41px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 650px) {
+    .home {
+        &-circle__violet {
+            right: -100px;
+        }
+    } 
 }

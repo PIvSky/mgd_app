@@ -111,7 +111,6 @@ const Nav = () => {
                 }
             </ul>
             <img className='bg-vector' src={bgVector} alt='background-vector'></img>
-            {/* TODO: here add background-asset */}
         </nav>
         <button onClick={showNavbar} className="hamburger-box">
             <div className='hamburger-inner' onClick={menuTranformation} ref={buttonRef}>
