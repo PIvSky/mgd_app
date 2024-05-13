@@ -1,5 +1,5 @@
 import {useRef, useState} from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate  } from 'react-router-dom'
 import './Nav.scss'
 // image imports
 import VectorBg from '../Assets/VectorBg/VectorBg';
@@ -11,6 +11,7 @@ const Nav = () => {
     const [isOfferClicked, setIsOfferClicked] = useState(false);
     const navRef = useRef();
     const buttonRef = useRef();
+    const navigate = useNavigate();
 
     // Hamburger menu action 
     const menuTranformation = () => {
@@ -20,6 +21,10 @@ const Nav = () => {
     const handleClick = () => {
         setIsOfferClicked(true);
     };
+
+    const navigateHome = () => {
+        navigate('/');
+    }
 
     const showNavbar = () => {
         navRef.current.classList.toggle('responsive_nav')
@@ -72,7 +77,7 @@ const Nav = () => {
     return (
       <header className="header">
         <img className='header-logo__mobile' src={mikaLogoMobile} alt='background-vector' />
-        <img className='header-logo__desktop' src={mikaLogoDesktop} alt='background-vector' />
+        <img className='header-logo__desktop' src={mikaLogoDesktop} alt='background-vector' onClick={navigateHome}/>
         <nav className="nav-container" ref={navRef}>
             <ul className="nav-list">
                 {NavList.map((item, index) => (
