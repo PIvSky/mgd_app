@@ -1,6 +1,7 @@
 @use '../../styles/typography';
 
 @import '../../styles/colors';
+@import '../../styles/z-index';
 // TODO: check: can I import maps of colors with @use instead of @import?
 // NavLink i an <a> tag in HTML
 
@@ -24,7 +25,7 @@ SMALL SCREEN
     }
 
     .nav-container {
-        z-index: 100;
+        z-index: map-get($z-index, nav-mobile);
         background-color: map-get($colors, white );
         display: flex;
         flex-direction: column;
@@ -37,7 +38,7 @@ SMALL SCREEN
         transform: translateY(-100vh);
         .nav-list {
             padding: 70px 39px;
-            z-index: 100;
+            z-index: map-get($z-index, nav-mobile);
             &__element {
                 padding-bottom: 14px;
                 list-style: none;
@@ -70,7 +71,7 @@ SMALL SCREEN
             }
         }
         .bg-vector {
-            z-index: 10;
+            z-index: map-get($z-index, bg-vector);
             position: absolute;
             top: -275px;
             left: -445px;
@@ -83,7 +84,7 @@ SMALL SCREEN
     }
 
     .hamburger-box {
-        z-index: 150;
+        z-index: map-get($z-index, ham-button);
         margin-top: 19px;
         margin-right: 23px;
         width: 53px;
@@ -206,10 +207,10 @@ SMALL SCREEN
             transform: none;
             background-color: map-get($colors, beige );
             height: 150px;
-            z-index: 0;
+            z-index: map-get($z-index, nav-desktop);
 
             .nav-list {
-                z-index: 0; 
+                z-index: map-get($z-index, nav-desktop);
                 padding: 30px 34px 0px 0px;       
                 display: flex;
                 flex-direction: row;
