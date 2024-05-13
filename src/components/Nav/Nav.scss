@@ -75,6 +75,9 @@ SMALL SCREEN
             top: -275px;
             left: -445px;
             scale: 0.65;
+            path {
+                fill: map-get($colors, beige )
+            }
         }
     }
 
@@ -197,6 +200,7 @@ SMALL SCREEN
             width: 177px;
             height: 78.821px;
             flex-shrink: 0;
+            cursor: pointer;
         }
 
         .nav-container {
@@ -205,7 +209,7 @@ SMALL SCREEN
             right: 1px;
             transform: none;
             background-color: map-get($colors, beige );
-            height: 150px;
+            height: 100px;
             z-index: map-get($z-index, nav-desktop);
 
             .nav-list {
