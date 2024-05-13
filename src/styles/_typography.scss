@@ -35,6 +35,7 @@
 @mixin content-regular {
     font-size: 14px;
     line-height: 1.25;
+    font-weight: 600;
 }
 
 @mixin md-content {
@@ -63,4 +64,8 @@
     font-weight: 600;
     letter-spacing: 12%;
     line-height: 1.25;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
 }
