@@ -1,0 +1,44 @@
+@import '../../styles/typography';
+@import '../../styles/colors';
+@import '../../styles/z-index';
+@import '../../styles/mixins';
+
+.blog-container {
+
+    .video-container {
+        position: relative;
+        width: 281px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .video-frame {
+            background-color: map-get($colors, black );
+            height: 168px;
+            width: 281px;
+            margin: 30px auto 0;
+            border-radius: 30px;
+        }
+
+        .video-title {
+            padding-top: 10px;
+            @include lg-title__mobile
+        }
+
+        .video-content {
+            padding-top: 10px; 
+            @include md-content;
+        }
+
+        .bg-vector {
+            position: absolute;
+            top: -118px;
+            @include vector-sm;
+            path {
+                fill: map-get($colors, white );
+            }
+        }
+    }
+}
