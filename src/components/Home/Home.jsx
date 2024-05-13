@@ -9,7 +9,7 @@ const Home = () => {
     };
 
     const content = {
-        main: "Specjalizujemy się w rozwoju branży gastronomicznej, oferując wsparcie w  zarządzaniu, marketingu, \n HR, analizach i planowaniu strategicznym. Jesteśmy tu, aby dostarczać skuteczne i nowatorskie rozwiązania dostosowane do Twoich potrzeb. Chcesz osiągnąć więcej?",
+        main: "Specjalizujemy się w rozwoju branży gastronomicznej, oferując wsparcie \n w  zarządzaniu, marketingu, \n HR, analizach \n i planowaniu strategicznym. Jesteśmy tu, aby dostarczać skuteczne\n i nowatorskie rozwiązania dostosowane do Twoich potrzeb. Chcesz osiągnąć więcej?",
         contact: 'Skontaktuj się z nami już dziś!',
         quote: "Proces jest ważniejszy niż wynik. Skupienie się na procesie prowadzi do lepszych wyników w dłuższym czasie",
         author: 'Shane Parrish' 

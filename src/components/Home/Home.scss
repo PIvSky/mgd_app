@@ -1,6 +1,6 @@
 @import '../../styles/typography';
 @import '../../styles/colors';
-
+@import '../../styles/z-index';
 
 .home {
     padding-top: 114px;
@@ -34,6 +34,7 @@
 
     &-circle__violet {
         position: absolute;
+        z-index: map-get($z-index, violec-circle );
         top: 86px;
         right: -180px;
         background-color: map-get($colors , violet );
