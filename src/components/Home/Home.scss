@@ -2,6 +2,8 @@
 @import '../../styles/colors';
 @import '../../styles/z-index';
 
+// TODO: ewentualnie do poprawy responsywność dla tabletu
+
 .home-deskopt {
     display: none;
 }
@@ -93,6 +95,15 @@
             padding-bottom: 41px;
         }
     }
+    .bg-vector {
+        z-index: map-get($z-index, bg-vector);
+        position: absolute;
+        width: 1234.199px;
+        height: 645.677px;
+        top: -58px;
+        left: -245px;
+    }
+    
 }
 
 @media screen and (min-width: 769px) {

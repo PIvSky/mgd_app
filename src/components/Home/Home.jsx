@@ -1,4 +1,5 @@
-import './Home.scss'
+import './Home.scss';
+import VectorBg from '../Assets/VectorBg/VectorBg';
 
 const Home = () => {
 
@@ -41,6 +42,7 @@ const Home = () => {
                     <p>"{content.mobile.quote}"</p>
                     <p>{content.mobile.author}</p>
                 </div>
+                <VectorBg className='bg-vector'/>
             </div> 
             <div className='home-deskopt'>
                 <div className='home-grid'>
@@ -58,7 +60,6 @@ const Home = () => {
                         <p>{content.desktop.author}</p>
                     </div>
                 </div>
-                
             </div>
         </>
     )
