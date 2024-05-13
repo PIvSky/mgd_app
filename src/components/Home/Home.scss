@@ -96,7 +96,6 @@
         }
     }
     .bg-vector {
-        z-index: map-get($z-index, bg-vector);
         position: absolute;
         width: 1234.199px;
         height: 645.677px;
@@ -114,6 +113,7 @@
 
     .home-deskopt {
         display: block;
+        position: relative;
         .home-grid {
             overflow: hidden;
             position: relative;
@@ -209,7 +209,14 @@
                     padding-top: 8px;
                     text-align: right;
                 }
-            }
+            }  
+        }
+        .bg-vector {
+            position: absolute;
+            width: 1483.594px;
+            height: 776.546px;
+            right: 92px;
+            top: -239px;          
         }
     }
 }

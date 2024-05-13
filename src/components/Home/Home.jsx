@@ -60,6 +60,7 @@ const Home = () => {
                         <p>{content.desktop.author}</p>
                     </div>
                 </div>
+                <VectorBg className='bg-vector'/>
             </div>
         </>
     )
