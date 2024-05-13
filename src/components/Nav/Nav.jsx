@@ -35,7 +35,7 @@ const Nav = () => {
         },
         { 
             element: 'oferta',
-            adress: '/offer'
+            // adress: '/offer'
         },
         { 
             element: 'succes story',
@@ -65,7 +65,7 @@ const Nav = () => {
             element: 'BADANIA RYNKU I TRENDY'
         },
         {
-            element: 'PROJECT MANAGEMENT USŁUG BUDOWLANO-WYKOŃCZENIOWYCH'
+            element: 'PROJECT MANAGEMENT USŁUG BUDOWLANO-WYKOŃCZENIOWYCH'
         },
     ]
 
