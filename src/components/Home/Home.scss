@@ -78,6 +78,7 @@
         align-items: center;
         justify-content: center;
         width: 70%;
+        max-width: 400px;
         p {
             text-align: center;
             @include content-italic
