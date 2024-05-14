@@ -1,0 +1,16 @@
+@import '../../styles/typography';
+@import '../../styles/colors';
+@import '../../styles/z-index';
+@import '../../styles/mixins';
+
+.succes-container {
+    position: relative;
+    overflow: hidden;
+
+    .bg-vector {
+        position: absolute;
+        top: -118px;
+        right: -245px;
+        @include vector-sm;
+    }
+}
