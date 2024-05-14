@@ -1,0 +1,78 @@
+@import '../../styles/typography';
+@import '../../styles/colors';
+@import '../../styles/z-index';
+@import '../../styles/mixins';
+
+.blog-container {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    height: 100lvh;
+    // TODO: nie jestem przekonany co do tego 100lvh, ale bez niego ucinał mi bg-vector
+
+    .blog-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
+            padding-inline: 62px;
+        }
+        
+        @media screen and (min-width: 1100px) {
+            padding-inline: 112px;
+        }
+
+        .video-container {
+            width: 281px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (min-width: 769px) {
+                width: 426.751px;
+                padding-inline: 5px;
+            }
+    
+            .video-frame {
+                background-color: map-get($colors, black );
+                height: 168px;
+                width: 281px;
+                margin: 30px auto 0;
+                border-radius: 30px;
+
+                @media screen and (min-width: 769px) {
+                    height: 256.591px;
+                    width: 100%;
+                }
+            }
+    
+            .video-title {
+                padding-top: 10px;
+                @include lg-title__mobile
+            }
+    
+            .video-content {
+                padding-top: 10px; 
+                @include md-content;
+            }
+        }     
+    }
+    .bg-vector {
+        position: absolute;
+        top: -118px;
+        left: -245px;
+        @include vector-sm;
+
+        @media screen and (min-width: 769px) {
+            // position: fixed;
+            @include vector-lg;
+            top: -198px;
+            left: -408px;
+        } 
+    }  
+}
