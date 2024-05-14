@@ -17,13 +17,15 @@ const Blog = () => {
     ]
     return (
         <div className='blog-container'>
-            {blogContent.map((item, index) => (
-                <div className='video-container' key={index}>
-                    <div className='video-frame'>{/* TODO: tutaj będzie zagnieżdżone video */}</div>
-                    <h2 className='video-title'>{item.title}</h2>
-                    <p className='video-content'>{item.content}</p>
-                </div>
-            ))}
+            <div className='blog-content'>
+                {blogContent.map((item, index) => (
+                    <div className='video-container' key={index}>
+                        <div className='video-frame'>{/* TODO: tutaj będzie zagnieżdżone video */}</div>
+                        <h2 className='video-title'>{item.title}</h2>
+                        <p className='video-content'>{item.content}</p>
+                    </div>
+                ))}
+            </div>
             <VectorBg className='bg-vector' />
         </div>
     )
