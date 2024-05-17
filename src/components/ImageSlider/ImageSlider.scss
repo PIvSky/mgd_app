@@ -4,7 +4,8 @@
 @import '../../styles/mixins';
 
 .slider-container {
-
+    position: relative;
+    
     .slide { 
         padding: 36px 0px 0px 0px;
         display: flex;
@@ -55,6 +56,19 @@
                     height: auto;
                 }
             }
+
+            .left-arrow-mobile {
+                position: absolute;
+                top: 130px;
+                left: -30px;
+                rotate: 180deg;
+            }
+
+            .right-arrow-mobile {
+                position: absolute;
+                top: 135px;
+                right: -30px;
+            }
         }
 
         &-content {
@@ -72,5 +86,7 @@
             padding-inline: 62px;
             text-align: right;
         }
+
+        
     }
 }
