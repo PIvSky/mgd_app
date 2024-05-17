@@ -31,6 +31,9 @@
                 border-radius: 50%;
                 // !!! below
                 overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
     
                 &__logo {
                     position: absolute;

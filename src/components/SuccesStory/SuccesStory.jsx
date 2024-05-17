@@ -4,9 +4,9 @@ import VectorBg from '../Assets/VectorBg/VectorBg';
 // img
 import bpwImg from '../../assets/succesStory/bpw/bpw-img.png';
 import bpwLogo from '../../assets/succesStory/bpw/bpw-logo.png'
-import charlotteImg from '../../assets/succesStory/charlotte/charlotte-img.jpg'
+import charlotteImg from '../../assets/succesStory/charlotte/charlotte-img.png'
 import charlotteLogo from '../../assets/succesStory/charlotte/charlotte-logo.png'
-import bibendaImg from '../../assets/succesStory/bibenda/bibenda-img.jpg'
+import bibendaImg from '../../assets/succesStory/bibenda/bibenda-img.png'
 import bibendaLogo from '../../assets/succesStory/bibenda/bibenda-logo.png'
 
 
