@@ -46,6 +46,15 @@ const ImageSlider = ({data}) => {
                             alt='brand-img'>
                         </img>
                     </div>
+                    <div className='dots-container'>
+                    {data.map((item ,index) => (
+                        <div className='dots-container__items' key={index} onClick={() => currentSlide(index)}>
+                            <svg height="20" width="20" onClick={prevSlide}>
+                                <circle className='dot-image' cx="7" cy="7" r="7" fill={currentIndex === index ? '#000' : '#D9D9D9'} />
+                            </svg> 
+                        </div>
+                    ))}
+                    </div>
                     <div className='right-arrow-mobile' onClick={nextSlide}>
                         <img src={arrowMobile} alt='right-arrow'> 
                         </img>
@@ -54,7 +63,6 @@ const ImageSlider = ({data}) => {
                 <p className='slide-content'>{data[currentIndex].content}</p>
                 <p className='slide-sign'>{insertLineBreaks(data[currentIndex].sign)}</p>            
             </div>
-            <div className='dots'></div>
         </div>
     )
 }
