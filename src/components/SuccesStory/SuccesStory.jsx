@@ -4,6 +4,10 @@ import VectorBg from '../Assets/VectorBg/VectorBg';
 // img
 import bpwImg from '../../assets/succesStory/bpw/bpw-img.png';
 import bpwLogo from '../../assets/succesStory/bpw/bpw-logo.png'
+import charlotteImg from '../../assets/succesStory/charlotte/charlotte-img.jpg'
+import charlotteLogo from '../../assets/succesStory/charlotte/charlotte-logo.png'
+import bibendaImg from '../../assets/succesStory/bibenda/bibenda-img.jpg'
+import bibendaLogo from '../../assets/succesStory/bibenda/bibenda-logo.png'
 
 
 const SuccesStory = () => {
@@ -17,23 +21,23 @@ const SuccesStory = () => {
             sign: 'Marcin Bełza,\n Partner BRAĆ Polskie Wina',
         },
         {
-            imgSrc: '',
-            logoSrc: '',
+            imgSrc: charlotteImg,
+            logoSrc: charlotteLogo,
             title: 'Charlotte',
             content: 'Krzysztof dołączył do Charlotte kiedy ważyły się losy warszawskiej Charlotte Menory. Objął stanowisko menedżera w momencie przeniesienia lokalu z placu Grzybowskiego na ulicę Próżną. Wsparł to niełatwe przedsięwzięcie logistyczne i projektowe swoim doświadczeniem, doskonałą organizacją oraz dobrą energią. Stworzył zgrany zespół kelnerski, kuchenny i kierowniczy, wspierał także rozwój cateringu Charlotte. Profesjonalizm, odpowiedzialność, charyzma w połączeniu z energicznością oraz pozytywnym nastawieniem - to cechy i styl pracy jakie reprezentuje Krzysztof.',
-            sign: '',
+            sign: 'Urszula Kuźnik,\n Menedżer ds. Marketingu i Sprzedaży',
         },
         {
-            imgSrc: '',
-            logoSrc: '',
+            imgSrc: bibendaImg,
+            logoSrc: bibendaLogo,
             title: 'Bibenda',
             content: 'Współpraca z Krzysztofem (Mika Gastro Design) pozwoliła nam uzyskać niezbędną przy zmianach strukturalnych perspektywę z zewnątrz. Dodatkowo profesjonalizm i podejście Krzysztofa z zacięciem do szczegółów ułatwia życie na przyszłość. Polecam w każdej sprawie związanej z biznesem gastronomicznym.',
-            sign: '',
+            sign: 'Beniamin Bielecki',
         },
     ]
     return (
         <div className='succes-container'>
-            <ImageSlider data={succesStoryContent[0]} />
+            <ImageSlider data={succesStoryContent} />
             <VectorBg className='bg-vector'/>
         </div>
     )
