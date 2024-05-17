@@ -1,13 +1,8 @@
 import './Home.scss';
 import VectorBg from '../Assets/VectorBg/VectorBg';
+import { insertLineBreaks } from '../../util/utility'
 
 const Home = () => {
-
-    const insertLineBreaks = (text) => {
-        return text.split('\n').map((line, index) => {
-            return index === 0 ? line : [<br key={index} />, line];
-        });
-    };
 
     const content = {
         mobile : {
