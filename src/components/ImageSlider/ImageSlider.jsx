@@ -28,8 +28,8 @@ const ImageSlider = ({data}) => {
     return (
         <div className='slider-container'>           
             <div className='slide'>
-                <h2 className='slide-title'>{data.title}</h2>
                 <div className='slide-img-wrapper'>
+                    <h2 className='slide-title'>{data[currentIndex].title}</h2>
                     <div className='left-arrow-mobile' onClick={prevSlide}>
                         <img src={arrowMobile} alt='left-arrow'></img>
                     </div>
