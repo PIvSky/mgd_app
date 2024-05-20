@@ -25,6 +25,10 @@ const ImageSlider = ({data}) => {
         }
     }
 
+    const currentSlide = () => {
+        setCurrentIndex(index)
+    }
+
     return (
         <div className='slider-container'>           
             <div className='slide'>
@@ -53,18 +57,18 @@ const ImageSlider = ({data}) => {
                         </img>
                     </div>
                     </div>
-                        <div className='dots-container'>
-                        {data.map((item ,index) => (
-                            <div className='dots-container__items' key={index} onClick={() => currentSlide(index)}>
-                                <svg height="20" width="20" onClick={prevSlide}>
-                                    <circle className='dot-image' cx="7" cy="7" r="7" fill={currentIndex === index ? '#000' : '#D9D9D9'} />
-                                </svg> 
-                            </div>
-                        ))}
+                    <div className='dots-container'>
+                    {data.map((item, index) => (
+                        <div className='dots-container__items' key={index} onClick={() => currentSlide(index)}>
+                            <svg height="20" width="20">
+                                <circle className='dot-image' cx="7" cy="7" r="7" fill={currentIndex === index ? '#000' : '#D9D9D9'} />
+                            </svg>
                         </div>
+                    ))}
+                    </div>
                     <div className='slide-content'>
                         
-                        <p className='slide-content-element'>{data[currentIndex].content} <div className='right-arrow-desktop' onClick={prevSlide}>
+                        <p className='slide-content-element'>{data[currentIndex].content} <div className='right-arrow-desktop' onClick={nextSlide}>
                             <img src={arrowDesktop} alt='left-arrow'></img>
                         </div></p>
                         <p className='slide-content-sign'>{insertLineBreaks(data[currentIndex].sign)}</p>
