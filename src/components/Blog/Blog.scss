@@ -2,6 +2,7 @@
 @import '../../styles/colors';
 @import '../../styles/z-index';
 @import '../../styles/mixins';
+@import '../../styles/mediaQueries';
 
 .blog-container {
     overflow: hidden;
@@ -16,7 +17,7 @@
         flex-wrap: wrap;
         margin: 0 auto;
 
-        @media screen and (min-width: 769px) {
+        @include for-desktop {
             flex-direction: row;
             padding-inline: 62px;
         }
@@ -33,7 +34,7 @@
             justify-content: center;
             align-items: center;
 
-            @media screen and (min-width: 769px) {
+            @include for-desktop {
                 width: 426.751px;
                 padding-inline: 5px;
             }
@@ -68,8 +69,7 @@
         left: -245px;
         @include vector-sm;
 
-        @media screen and (min-width: 769px) {
-            // position: fixed;
+        @include for-desktop {
             @include vector-lg;
             top: -198px;
             left: -408px;
