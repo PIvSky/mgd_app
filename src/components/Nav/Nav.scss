@@ -1,6 +1,7 @@
 @use '../../styles/typography';
 @import '../../styles/colors';
 @import '../../styles/z-index';
+@import '../../styles/mediaQueries';
 /* 
 SMALL SCREEN 
 */
@@ -183,7 +184,7 @@ SMALL SCREEN
     }
 }
 
-@media screen and (min-width: 769px) {
+@include for-desktop {
     
     .header {
         position: relative;
