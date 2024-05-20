@@ -1,6 +1,7 @@
 @import '../../styles/typography';
 @import '../../styles/colors';
 @import '../../styles/z-index';
+@import '../../styles/mediaQueries';
 
 // TODO: ewentualnie do poprawy responsywność dla tabletu
 
@@ -17,6 +18,7 @@
     &-content {
         padding: 0px 0px 0px 38px;
         width: 251px;
+
         @media screen and (min-width: 550px) and (max-width: 650px) {
             padding-left: 68px;
         }
@@ -105,7 +107,7 @@
     
 }
 
-@media screen and (min-width: 769px) {
+@include for-desktop {
 
     .mobile {
         display: none;
@@ -128,6 +130,7 @@
                 grid-area: 1 / 1 / 2 / 2;
                 max-width: 443px;
                 padding: 36px 0px 0px 32px;
+
                 @media screen and (min-width: 875px) {
                     padding: 36px 0px 0px 102px;
                 }
@@ -135,6 +138,7 @@
                     @include md-content;
                     font-size: 16px;
                     text-wrap: wrap;
+                    
                     @media screen and (min-width: 875px) {
                         font-size: 20px;
                     }
@@ -155,6 +159,7 @@
                 flex-direction: column;
                 margin: 0 auto;
                 margin-right: 32px;
+
                 @media screen and (min-width: 875px) {
                     margin-right: 127px;
                 }
