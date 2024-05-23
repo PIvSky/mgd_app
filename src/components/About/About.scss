@@ -1,0 +1,239 @@
+@import '../../styles/typography';
+@import '../../styles/colors';
+@import '../../styles/z-index';
+@import '../../styles/mixins';
+@import '../../styles/mediaQueries';
+
+.about {
+
+    .bio {
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .bio-title {
+                padding-top: 25px;
+                &__element {
+                    @include lg-title__mobile;
+                }
+            }
+
+            .bio-photo {
+                padding-top: 8px;
+                img {
+                    width: 281px;
+                    height: 281px;
+                }
+            }
+
+            .bio-content-element {
+                padding-top: 29px;
+                padding-inline: 60px;
+                max-width: 350px;
+
+                p {
+                    @include md-content;
+                    font-weight: 500;
+                    text-align: center;
+                    
+                    &:nth-child(2) {
+                        padding-top: 15px;
+                    }
+                }
+
+            }
+
+            .bio-content-mission {
+                padding-top: 25px;
+
+                h4 {
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                .rect-container {
+                    margin: 0 auto;
+                    display: flex;
+                    width: 80%;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    .mission-rect {
+                        margin-top: 18px;
+                        margin-inline: 10px;
+                        width: 253px;
+                        height: 119px;
+                        border-radius: 54px;
+                        background-color: map-get($colors, orange);
+                        display: flex;
+                        align-items: center;
+                        &:nth-child(1) {
+                            margin-top: 8px;
+                        }
+    
+                        &-text {
+                            text-align: center;
+                            padding-inline: 15px;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 18px;
+                        }
+                    }
+                }
+                
+            }
+
+            .bio-content-vision {
+                padding-top: 45px;
+
+                h4 {
+                    text-align: center;
+                }
+
+                .rect-container {
+                    margin: 0 auto;
+                    display: flex;
+                    width: 80%;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    .vision-rect {
+                        margin-top: 18px;
+                        margin-inline: 10px;
+                        width: 253px;
+                        height: 119px;
+                        border-radius: 54px;
+                        background-color: map-get($colors, orange);
+                        display: flex;
+                        align-items: center;
+                        &:nth-child(1) {
+                            margin-top: 8px;
+                        }
+    
+                        &-text {
+                            text-align: center;
+                            margin: 0 auto;
+                            padding-inline: 15px;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 18px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+        .bio-partners {
+
+            @include  for-large-desktop {
+                margin: 0 auto;
+                max-width: 930px;
+            }
+
+            padding-top: 72px;
+
+            h4 {
+                padding: 41px;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 1.08px;
+                text-transform: uppercase;
+            }
+
+            .partners-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                .partner-logo {
+                    width: 180px;
+                    height: auto;
+                    padding-inline: 40px;
+                    padding-bottom: 83px;
+                    &:nth-child(3) {
+                        scale: 0.8;
+                    }
+                    &:nth-child(4) {
+                        scale: 0.6;
+                    }
+
+                    @include  for-large-desktop {
+                        padding-inline: 25px;
+
+                    }
+                }
+            }
+        }
+
+        .bio-people {
+
+            @include  for-large-desktop {
+                margin: 0 auto;
+                max-width: 930px;
+            }
+
+            h4 {
+                padding: 41px;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 1.08px;
+                text-transform: uppercase;
+            }
+
+            .people-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                @include  for-large-desktop {
+                    justify-content: space-between;
+                }
+
+                .person-card {
+                    width: 60%;
+                    max-width: 200px;
+                    padding-inline: 34px;
+                    padding-bottom: 34px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+
+                    .person-rect {
+                        border-radius: 200px;
+                        background-color: map-get($colors, orange );
+                        width: 200px;
+                        height: 200px;
+                        margin: 0 auto;
+                        margin-bottom: 32px;
+
+                        img {
+                            width: 200px;
+                            height: 200px;
+                        }
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
