@@ -131,15 +131,30 @@
         
         .bio-partners {
             padding-top: 72px;
-            padding-left: 41px;
 
             h4 {
+                padding: 41px;
                 font-size: 9px;
                 font-style: normal;
                 font-weight: 800;
                 line-height: normal;
                 letter-spacing: 1.08px;
                 text-transform: uppercase;
+            }
+
+            .partners-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                .partner-logo {
+                    width: 180px;
+                    height: auto;
+                    padding-inline: 40px;
+                    padding-bottom: 83px;
+                }
             }
         }
     }

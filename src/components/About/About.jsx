@@ -1,5 +1,8 @@
 import './About.scss'
 import aboutPic from '../../assets/about/about-pic.png';
+import logo1 from '../../assets/about/logo/addcontrolling.svg';
+import logo2 from '../../assets/about/logo/kadromierz.svg';
+import logo3 from '../../assets/about/logo/gopos.png';
 
 const About = () => {
 
@@ -17,6 +20,8 @@ const About = () => {
             ]
         }
     };
+
+    const aboutPartnersLogos = [logo1, logo2, logo3];
 
     return (
         <div className='about'>
@@ -56,7 +61,12 @@ const About = () => {
                 </div>
                 <div className='bio-partners'>
                     <h4 className='partners-subtitle'>partnerzy merytoryczni</h4>
-
+                    <div className='partners-container'>
+                        {aboutPartnersLogos.map((item, index) => (
+                            <img src={item} className='partner-logo' alt='logo-pic' key={index}></img>
+                        ))}
+                    </div>
+                        
                 </div>
             </div>
         </div>
