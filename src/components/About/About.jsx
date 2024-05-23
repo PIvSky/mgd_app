@@ -13,7 +13,7 @@ const About = () => {
             vision: [
                 'Kreowanie zmiany',
                 'Kreowanie unikalnych konceptów',
-                'Rozwój polskich konceptów restauracyjnych do rangi wielkich przedsiębiorstw i budowanie imperiów na miarę Danny’ego Mayera.'
+                'Rozwój polskich konceptów restauracyjnych do rangi wielkich przedsiębiorstw i budowanie imperiów na miarę Danny’ego Mayera.',                
             ]
         }
     };
@@ -34,20 +34,29 @@ const About = () => {
                     </div>
                     <div className='bio-content-mission'>
                         <h4 className='mission-subtitle'>Misja:</h4>
+                        <div className='rect-container'>
                         {aboutData.content.mission.map((item, index) => (
                             <div className='mission-rect' key={index}>
                                 <p className='mission-rect-text'>{item}</p>
                             </div>
                         ))}
+                        </div>
                     </div>
                     <div className='bio-content-vision'>
                         <h4 className='vision-subtitle'>Wizja:</h4>
-                        {aboutData.content.vision.map((item, index) => (
-                            <div className='vision-rect' key={index}>
-                                <p className='vision-rect-text'>{item}</p>
-                            </div>
-                        ))}
+                        <div className='rect-container'>
+                            {aboutData.content.vision.map((item, index) => (
+                                <div className='vision-rect' key={index}>
+                                    <p className='vision-rect-text'>{item}</p>
+                                </div>
+                            ))}
+                        </div>
+                        
                     </div>
+                </div>
+                <div className='bio-partners'>
+                    <h4 className='partners-subtitle'>partnerzy merytoryczni</h4>
+
                 </div>
             </div>
         </div>

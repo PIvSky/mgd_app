@@ -48,26 +48,41 @@
 
                 h4 {
                     text-align: center;
+                    margin: 0 auto;
                 }
-
-                .mission-rect {
-                    margin-top: 8px;
-                    width: 253px;
-                    height: 119px;
-                    border-radius: 54px;
-                    background-color: map-get($colors, orange);
+                .rect-container {
+                    margin: 0 auto;
                     display: flex;
+                    width: 80%;
+                    flex-direction: row;
+                    justify-content: center;
                     align-items: center;
+                    flex-wrap: wrap;
 
-                    &-text {
-                        text-align: center;
-                        padding-inline: 15px;
-                        font-size: 12px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 18px;
+                    .mission-rect {
+                        margin-top: 18px;
+                        margin-inline: 10px;
+                        width: 253px;
+                        height: 119px;
+                        border-radius: 54px;
+                        background-color: map-get($colors, orange);
+                        display: flex;
+                        align-items: center;
+                        &:nth-child(1) {
+                            margin-top: 8px;
+                        }
+    
+                        &-text {
+                            text-align: center;
+                            padding-inline: 15px;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 18px;
+                        }
                     }
                 }
+                
             }
 
             .bio-content-vision {
@@ -77,25 +92,54 @@
                     text-align: center;
                 }
 
-                .vision-rect {
-                    margin-top: 8px;
-                    width: 253px;
-                    height: 119px;
-                    border-radius: 54px;
-                    background-color: map-get($colors, orange);
+                .rect-container {
+                    margin: 0 auto;
                     display: flex;
+                    width: 80%;
+                    flex-direction: row;
+                    justify-content: center;
                     align-items: center;
+                    flex-wrap: wrap;
 
-                    &-text {
-                        text-align: center;
-                        margin: 0 auto;
-                        padding-inline: 15px;
-                        font-size: 12px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 18px;
+                    .vision-rect {
+                        margin-top: 18px;
+                        margin-inline: 10px;
+                        width: 253px;
+                        height: 119px;
+                        border-radius: 54px;
+                        background-color: map-get($colors, orange);
+                        display: flex;
+                        align-items: center;
+                        &:nth-child(1) {
+                            margin-top: 8px;
+                        }
+    
+                        &-text {
+                            text-align: center;
+                            margin: 0 auto;
+                            padding-inline: 15px;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 18px;
+                        }
                     }
                 }
+                
+            }
+        }
+        
+        .bio-partners {
+            padding-top: 72px;
+            padding-left: 41px;
+
+            h4 {
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 1.08px;
+                text-transform: uppercase;
             }
         }
     }
