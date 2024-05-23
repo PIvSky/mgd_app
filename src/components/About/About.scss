@@ -2,9 +2,12 @@
 @import '../../styles/colors';
 @import '../../styles/z-index';
 @import '../../styles/mixins';
+@import '../../styles/mediaQueries';
 
 .about {
+
     .bio {
+
         &-content {
             display: flex;
             flex-direction: column;
@@ -130,6 +133,12 @@
         }
         
         .bio-partners {
+
+            @include  for-large-desktop {
+                margin: 0 auto;
+                max-width: 930px;
+            }
+
             padding-top: 72px;
 
             h4 {
@@ -154,6 +163,75 @@
                     height: auto;
                     padding-inline: 40px;
                     padding-bottom: 83px;
+                    &:nth-child(3) {
+                        scale: 0.8;
+                    }
+                    &:nth-child(4) {
+                        scale: 0.6;
+                    }
+
+                    @include  for-large-desktop {
+                        padding-inline: 25px;
+
+                    }
+                }
+            }
+        }
+
+        .bio-people {
+
+            @include  for-large-desktop {
+                margin: 0 auto;
+                max-width: 930px;
+            }
+
+            h4 {
+                padding: 41px;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 1.08px;
+                text-transform: uppercase;
+            }
+
+            .people-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                @include  for-large-desktop {
+                    justify-content: space-between;
+                }
+
+                .person-card {
+                    width: 60%;
+                    max-width: 200px;
+                    padding-inline: 34px;
+                    padding-bottom: 34px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+
+                    .person-rect {
+                        border-radius: 200px;
+                        background-color: map-get($colors, orange );
+                        width: 200px;
+                        height: 200px;
+                        margin: 0 auto;
+                        margin-bottom: 32px;
+
+                        img {
+                            width: 200px;
+                            height: 200px;
+                        }
+                    }
+
+                    p {
+                        text-align: center;
+                    }
                 }
             }
         }

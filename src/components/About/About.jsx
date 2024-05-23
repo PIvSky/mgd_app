@@ -3,6 +3,10 @@ import aboutPic from '../../assets/about/about-pic.png';
 import logo1 from '../../assets/about/logo/addcontrolling.svg';
 import logo2 from '../../assets/about/logo/kadromierz.svg';
 import logo3 from '../../assets/about/logo/gopos.png';
+import logo4 from '../../assets/about/logo/bp.png';
+import person1 from '../../assets/about/people/people.png';
+import person2 from '../../assets/about/people/people.png';
+import person3 from '../../assets/about/people/people.png';
 
 const About = () => {
 
@@ -21,7 +25,22 @@ const About = () => {
         }
     };
 
-    const aboutPartnersLogos = [logo1, logo2, logo3];
+    const aboutPartnersLogos = [logo1, logo2, logo3, logo4];
+
+    const aboutPeoplePhoto = [
+        {
+            src: person1,
+            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        },
+        {
+            src: person2,
+            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        },
+        {
+            src: person3,
+            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        }
+    ];
 
     return (
         <div className='about'>
@@ -65,8 +84,20 @@ const About = () => {
                         {aboutPartnersLogos.map((item, index) => (
                             <img src={item} className='partner-logo' alt='logo-pic' key={index}></img>
                         ))}
-                    </div>
-                        
+                    </div>     
+                </div>
+                <div className='bio-people'>
+                    <h4 className='people-subtitle'>partnerzy merytoryczni</h4>
+                    <div className='people-container'>
+                        {aboutPeoplePhoto.map((item, index) => (
+                            <div className='person-card' key={index}>
+                                <div className='person-rect'>
+                                    <img src={item.src} alt='person-pic'/>
+                                </div>
+                                <p>{item.text}</p>
+                            </div>
+                        ))}
+                    </div>     
                 </div>
             </div>
         </div>
