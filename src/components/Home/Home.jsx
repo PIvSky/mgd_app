@@ -39,23 +39,24 @@ const Home = () => {
                 </div>
                 <VectorBg className='bg-vector'/>
             </div> 
-            <div className='home-deskopt'>
+            <div className='home-desktop'>
                 <div className='home-grid'>
-                    <div className='home-content__deskopt'>
-                        <p className='home-content__deskopt__element'>{insertLineBreaks(content.desktop.main)}
+                    <div className='home-desktop'>
+                        <p className='home-content__desktop__element'>{insertLineBreaks(content.desktop.main)}
                         </p>
                     </div>
-                    <div className='home-circle__deskopt__orange'>
+                    <div className='home-circle__desktop__orange'>
                         <p>{content.desktop.contact.question}</p>
                         <button>{insertLineBreaks(content.desktop.contact.button)}</button>
                     </div>
-                    <div className='home-circle__deskopt__violet'/>
-                    <div className='home-quote__deskopt'>
+                    <div className='home-circle__desktop__violet'/>
+                    <div className='home-quote__desktop'>
                         <p>"{insertLineBreaks(content.desktop.quote)}"</p>
                         <p>{content.desktop.author}</p>
                     </div>
                 </div>
                 <VectorBg className='bg-vector'/>
+                {/* TODO: bg-vector jest pod nav-conteiner - do rozwiązania w przyszłości */}
             </div>
         </>
     )
