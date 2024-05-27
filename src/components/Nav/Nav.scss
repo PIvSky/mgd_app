@@ -54,6 +54,10 @@ SMALL SCREEN
                     color: map-get($colors, orange );
                     border-bottom: 3px solid black;
                 }
+
+                a.border {
+                    border-bottom: 3px solid black;
+                }
             }
 
             .offer-container {
@@ -188,7 +192,7 @@ SMALL SCREEN
     
     .header {
         position: relative;
-        width: 100%;
+        width: 95vw;
         display: flex;
         &-logo__mobile {
             display: none;
@@ -211,10 +215,9 @@ SMALL SCREEN
             transform: none;
             background-color: map-get($colors, beige );
             height: 100px;
-            z-index: map-get($z-index, nav-desktop);
+            // z-index: map-get($z-index, nav-desktop);
 
             .nav-list {
-                z-index: map-get($z-index, nav-desktop);
                 padding: 30px 34px 0px 0px;       
                 display: flex;
                 flex-direction: row;
@@ -239,6 +242,7 @@ SMALL SCREEN
                     position: absolute;
                     right: -30px;
                     top: 51px;
+                    z-index: 100;
 
                     @media screen and (min-width: 881px) {
                         right: 50px;
@@ -248,11 +252,19 @@ SMALL SCREEN
                         right: 43px;
                     }
 
-                    &__element:nth-child(1) {
-                        z-index: 100;
+
+
+                    &__element{
+                        cursor: pointer;
                         background-color: map-get($colors, beige );
 
+                        :nth-child(1) {
+                            z-index: 100;
+                            background-color: map-get($colors, beige );
+                        }
                     }
+                    
+                        
                 }
             }
 

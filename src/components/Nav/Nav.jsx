@@ -9,6 +9,7 @@ import mikaLogoDesktop from '../../assets/logo/mika-logo-desktop.png';
 const Nav = () => {
 
     const [isOfferClicked, setIsOfferClicked] = useState(false);
+    const [isOfferActive, setIsOfferActive] = useState(false);
     const navRef = useRef();
     const buttonRef = useRef();
     const navigate = useNavigate();
@@ -20,6 +21,12 @@ const Nav = () => {
 
     const handleClick = () => {
         setIsOfferClicked(true);
+    };
+
+    const handleOfferElementClick = () => {
+        setIsOfferActive(true);
+        showNavbar();
+        menuTranformation();
     };
 
     const navigateHome = () => {
@@ -84,13 +91,17 @@ const Nav = () => {
                     <li className="nav-list__element" key={index}>
                         <NavLink
                             to={item.adress}
-                            className={({ isActive }) => (isActive ? 'active' : '')}
+                            className={({ isActive }) => 
+                                (isActive && item.element !== 'oferta' ? 'active' : '') + 
+                                ((isOfferClicked || isOfferActive) && item.element === 'oferta' ? ' active' : '')
+                        }
                             onClick={() => {
                                 if (item.element === 'oferta') {
                                     handleClick();
-                                } else if (item.element != 'oferta') {
-                                    setIsOfferClicked(false)
-                                    menuTranformation()
+                                } else {
+                                    setIsOfferClicked(false);
+                                    setIsOfferActive(false);
+                                    menuTranformation();
                                     showNavbar();
                                 }
                             }}
@@ -102,10 +113,7 @@ const Nav = () => {
                                 <p 
                                     className='offer-container__element' 
                                     key={index}
-                                    onClick={() => {
-                                        showNavbar();
-                                        menuTranformation();
-                                        }}
+                                    onClick={handleOfferElementClick}
                                 >{item.element}
                                 </p>
                             ))}
