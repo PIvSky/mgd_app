@@ -137,5 +137,3 @@ const Nav = () => {
 }
 
 export default Nav
-
-// TODO : gdy pojawia się scroll, przesuwa się kontent nawigacji - do poprawy
