@@ -52,31 +52,32 @@ const About = () => {
                     <div className='bio-photo'>
                         <img className='bio-photo-element' alt='about-photo' src={aboutPic}/>
                     </div>
-                    <div className='bio-content-element'>
-                        <p>{aboutData.content.aboutOne}</p>
-                        <p>{aboutData.content.aboutTwo}</p>
-                    </div>
-                    <div className='bio-content-mission'>
-                        <h4 className='mission-subtitle'>Misja:</h4>
-                        <div className='rect-container'>
-                        {aboutData.content.mission.map((item, index) => (
-                            <div className='mission-rect' key={index}>
-                                <p className='mission-rect-text'>{item}</p>
-                            </div>
-                        ))}
+                    <div className='grid-wrapper'>
+                        <div className='bio-content-element'>
+                            <p>{aboutData.content.aboutOne}</p>
+                            <p>{aboutData.content.aboutTwo}</p>
                         </div>
-                    </div>
-                    <div className='bio-content-vision'>
-                        <h4 className='vision-subtitle'>Wizja:</h4>
-                        <div className='rect-container'>
-                            {aboutData.content.vision.map((item, index) => (
-                                <div className='vision-rect' key={index}>
-                                    <p className='vision-rect-text'>{item}</p>
+                        <div className='bio-content-mission'>
+                            <h4 className='mission-subtitle'>Misja:</h4>
+                            <div className='rect-container'>
+                            {aboutData.content.mission.map((item, index) => (
+                                <div className='mission-rect' key={index}>
+                                    <p className='mission-rect-text'>{item}</p>
                                 </div>
                             ))}
+                            </div>
                         </div>
-                        
-                    </div>
+                        <div className='bio-content-vision'>
+                            <h4 className='vision-subtitle'>Wizja:</h4>
+                            <div className='rect-container'>
+                                {aboutData.content.vision.map((item, index) => (
+                                    <div className='vision-rect' key={index}>
+                                        <p className='vision-rect-text'>{item}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div> 
                 </div>
                 <div className='bio-partners'>
                     <h4 className='partners-subtitle'>partnerzy merytoryczni</h4>
@@ -100,6 +101,7 @@ const About = () => {
                     </div>     
                 </div>
             </div>
+            {/* TODO: dodaj background img */}
         </div>
     )
 }
