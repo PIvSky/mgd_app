@@ -12,6 +12,8 @@
     // TODO: nie jestem przekonany co do tego 100lvh, ale bez niego ucinał mi bg-vector
 
     .blog-content {
+        margin: 0 auto;
+        max-width: 1300px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
