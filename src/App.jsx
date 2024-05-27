@@ -23,16 +23,12 @@ const websiteRoutes = createBrowserRouter([
     children: [
       { path: '/', element: <Home />},
       { path: '/about', element: <About/>},
-      { 
-        path: '/offer', 
-        element: <Offer/>, 
-        children : [
-          { path: '/new-business', element: <NewBiz/>},
-          { path: '/existing-business', element: <ExistBiz/>},
-          { path: '/modern-business-tools', element: <BizTools />},
-          { path: '/market-research', element: <Research />},
-          { path: '/project-manager', element: <ProjectMan />},
-      ],},
+      { path: '/offer', element: <Offer/>},
+      { path: '/offer/new-business', element: <NewBiz/>},
+      { path: '/offer/existing-business', element: <ExistBiz/>},
+      { path: '/offer/modern-business-tools', element: <BizTools />},
+      { path: '/offer/market-research', element: <Research />},
+      { path: '/offer/project-manager', element: <ProjectMan />},
       { path: '/succes-story', element: <SuccesStory/>},
       { path: '/blog', element: <Blog/>},
       { path: '/contact', element: <Contact/>}

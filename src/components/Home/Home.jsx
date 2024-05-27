@@ -41,7 +41,7 @@ const Home = () => {
             </div> 
             <div className='home-desktop'>
                 <div className='home-grid'>
-                    <div className='home-desktop'>
+                    <div className='home-content__desktop'>
                         <p className='home-content__desktop__element'>{insertLineBreaks(content.desktop.main)}
                         </p>
                     </div>

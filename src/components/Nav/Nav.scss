@@ -65,6 +65,7 @@ SMALL SCREEN
                 text-transform: uppercase;
 
                 &__element {
+                    display: block;
                     padding: 10px 0px 10px 10px;
                     line-height: 17px;
                     letter-spacing: 1px;
