@@ -1,0 +1,67 @@
+@import '../../../styles/typography';
+@import '../../../styles/colors';
+@import '../../../styles/z-index';
+@import '../../../styles/mediaQueries';
+
+.new-biz {
+    overflow: hidden;
+    position: relative;
+
+    .container {
+        margin: 0 auto;
+        padding-inline: 38px;
+        max-width: 450px;
+
+        .title {
+            @include lg-title__mobile;
+            padding-top: 25px;
+            width: 185px;
+        }
+
+        .rectangle-container {
+            display: flex;
+            justify-content: flex-end;
+            .rectangle {
+                margin-top: 15px;
+                width: 225px;
+                height: 225px;
+                border-radius: 225px;
+                background-color: map-get($colors, orange );
+                display: flex;
+                align-items: center;
+    
+                &-content {
+                    text-align: center;
+                    padding: 30px;
+                    color: map-get($colors, gray );
+                    @include md-content;
+                    font-weight: 600;
+                }
+            }  
+        }
+
+        .desc {  
+            &-one {
+                @include md-content;
+                font-weight: 500;
+                padding-top: 31px;
+            }
+
+            &-two {
+                @include md-content;
+                font-weight: 500;
+                padding-top: 15px;
+                padding-left: 60px;
+            }
+        }
+        
+    }
+
+    .bg-vector {
+        position: absolute;
+        width: 1234.199px;
+        height: 645.677px;
+        top: -118px;
+        left: -245px;
+    }
+}
