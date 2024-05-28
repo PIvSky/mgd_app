@@ -24,7 +24,8 @@ const Nav = () => {
     };
 
     const handleOfferElementClick = () => {
-        setIsOfferActive(true);
+        setIsOfferActive(true)
+        setIsOfferClicked(false)
         showNavbar();
         menuTranformation();
     };
@@ -65,19 +66,24 @@ const Nav = () => {
 
     const OfferContent = [
         {
-            element: 'dla nowo otwieranych biznesów'
+            element: 'dla nowo otwieranych biznesów',
+            adress: '/offer/new-business'
         },
         {
-            element: 'dla instniejących biznesów'
+            element: 'dla instniejących biznesów',
+            adress: '/offer/existing-business'
         },
         {
-            element: 'IMPLEMENTACJA NOWOCZESNYCH NARZĘDZI BIZNESOWYCH'
+            element: 'IMPLEMENTACJA NOWOCZESNYCH NARZĘDZI BIZNESOWYCH',
+            adress: '/offer/modern-business-tools'
         },
         {
-            element: 'BADANIA RYNKU I TRENDY'
+            element: 'BADANIA RYNKU I TRENDY',
+            adress: '/offer/market-research'
         },
         {
-            element: 'PROJECT MANAGEMENT USŁUG BUDOWLANO-WYKOŃCZENIOWYCH'
+            element: 'PROJECT MANAGEMENT USŁUG BUDOWLANO-WYKOŃCZENIOWYCH',
+            adress: '/offer/project-manager'
         },
     ]
 
@@ -110,12 +116,13 @@ const Nav = () => {
                         {isOfferClicked && item.element === 'oferta' && (
                         <div className="offer-container">
                             {OfferContent.map((item, index) => (
-                                <p 
+                                <NavLink 
+                                    to={item.adress}
                                     className='offer-container__element' 
                                     key={index}
                                     onClick={handleOfferElementClick}
                                 >{item.element}
-                                </p>
+                                </NavLink>
                             ))}
                         </div>
                         )}
@@ -137,5 +144,3 @@ const Nav = () => {
 }
 
 export default Nav
-
-// TODO : gdy pojawia się scroll, przesuwa się kontent nawigacji - do poprawy
