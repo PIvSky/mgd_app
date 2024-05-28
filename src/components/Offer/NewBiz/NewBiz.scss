@@ -7,7 +7,7 @@
     overflow: hidden;
     position: relative;
 
-    .container {
+    .main-container {
         margin: 0 auto;
         padding-inline: 38px;
         max-width: 450px;
@@ -40,7 +40,11 @@
             }  
         }
 
-        .desc {  
+        .text {  
+            margin: 0 auto;
+            padding-inline: 38px;
+            max-width: 450px;
+            
             &-one {
                 @include md-content;
                 font-weight: 500;
@@ -54,14 +58,65 @@
                 padding-left: 60px;
             }
         }
-        
+    }
+
+    .desc {
+        margin: 0 auto;
+        padding-inline: 38px;
+        max-width: 450px;
+
+        &-title {
+            padding-top: 30px;
+            @include md-title__mobile;
+        }
+
+        &-subtitle {
+            @include md-content;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+
+        .inforgraphic-container {
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .graf-card {
+                padding-top: 21px;
+                padding-right: 20px;
+                width: 126px;
+
+                .graf-rect {
+                    width: 126px;
+                    height: 126px;
+                    border-radius: 50%;
+                    background-color: map-get($colors, violet );
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        scale: 0.5;
+                    }
+                }
+                
+                .graf-text {
+                    @include md-content;
+                    text-align: center;
+                    font-weight: 500;
+                    padding-top: 10px;
+                }
+            }
+        }
     }
 
     .bg-vector {
         position: absolute;
         width: 1234.199px;
         height: 645.677px;
-        top: -118px;
+        top: -228px;
         left: -245px;
     }
 }
