@@ -46,8 +46,26 @@ const NewBiz = () => {
         },
     ];
 
+    const report = {
+        title: 'Po zakończonym procesie otrzymasz pełny raport wraz z komentarzamiekspertów:',
+        subtitleOne : 'Jakie korzyści funkcjonalne i pozafunkcjonalne otrzymasz współpracując z nami:',
+        listOne : [
+            'Optymalizacja budżetów otwarciowych',
+            'Spokój w realizacji inwestycji ',
+            'Poszerzenie wiedzy z kategorii (gastro) i biznesowej w ogóle',  
+            'Optymalizacja nakładów (dolar & time)',
+            'Rozwiązywanie trudnych dylematów biznesowych',  
+            'Zwiększenie sprzedaży ',
+            'Zbudowanie / odbudowanie zaufania wśród docelowych klientów / konsumentów ',
+            'Długookresowy horyzont planistyczny',  
+            'Kontrola kosztów i realne budżetowanie przychodów',
+            "Powtarzalne narzędzia do prowadzenia biznesu (np. P&L, procesy, standardy)",
+            'Rozwinięcie i materializacja (down-to-earth) pomysłów / konceptów / wizji klienta',
+            'Doradztwo ad-hoc na wybrane dylematy / pytania klienta'
+        ]
+    };
+
     return (
-    <>
         <div className='new-biz'>
             <div className='main-container'>
                 <h3 className='title'>{main.title}</h3>
@@ -66,7 +84,7 @@ const NewBiz = () => {
                 <p className='desc-subtitle'>{desc.subtitle}</p>
                 <div className='inforgraphic-container'>
                 {infographic.map((index, key) => (
-                    <div className='graf-card'>
+                    <div className='graf-card' key={key}>
                         <div className='graf-rect'>
                             <img src={index.src} alt='graf-img'></img>
                         </div>
@@ -75,11 +93,26 @@ const NewBiz = () => {
                 ))}
                 </div>
             </div>
+            <div className='report'>
+                <h3 className='report-title'>{report.title}</h3>
+                <div className='subtitle-one'>
+                    <img src={sketch} alt='sketch' />
+                    <p>{report.subtitleOne}</p>
+                </div>
+                <div className='list-one'>
+                    <ul>
+                    {report.listOne.map((index, key)=> (
+                        <li key={key}>{index}</li>
+                    ))}
+                    </ul>
+                </div>
+                <div className='subtitle-two'>
+                    
+                </div>
+            </div>
 
             <VectorBg className='bg-vector'/>
-        </div>
-    </>
-        
+        </div>        
     )
 }
 

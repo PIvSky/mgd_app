@@ -68,6 +68,7 @@
         &-title {
             padding-top: 30px;
             @include md-title__mobile;
+            font-weight: 600;
         }
 
         &-subtitle {
@@ -107,6 +108,42 @@
                     text-align: center;
                     font-weight: 500;
                     padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    .report {
+        margin: 0 auto;
+        padding-inline: 38px;
+        max-width: 450px;
+
+        &-title {
+            padding-top: 55px;
+            @include md-title__mobile;
+            font-weight: 600;
+        }
+
+        .subtitle-one {
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+
+            p {
+                @include md-content;
+                font-weight: 600;
+            }
+        }
+
+        .list-one {
+            padding-top: 21px;
+            padding-left: 100px;
+            ul {
+                list-style: circle;
+                list-style-type: disc;
+                li {
+                    @include md-content;
+                    font-weight: 500;
                 }
             }
         }
