@@ -1,0 +1,106 @@
+@import '../../../styles/typography';
+@import '../../../styles/colors';
+@import '../../../styles/z-index';
+@import '../../../styles/mediaQueries';
+
+.ex-biz {
+    overflow: hidden;
+    position: relative;
+
+    .main-container {
+        margin: 0 auto;
+        padding-inline: 38px;
+        max-width: 450px;
+
+        // @include for-desktop {
+        //     margin: 0;
+        //     padding-left: 102px;
+        //     max-width: 755px;
+        //     position: relative;
+        // }
+
+        // @include for-large-desktop {
+        //     margin: 0 auto;
+        //     max-width: 915px
+        // }
+
+        .title {
+            @include lg-title__mobile;
+            padding-top: 25px;
+            width: 185px;
+
+            // @include for-desktop {
+            //     @include lg-title;
+            //     font-size: 45px;
+            //     width: 345px;
+            // }
+
+            // @include for-large-desktop {
+            //     font-size: 68px;
+            //     width: 545px;
+            // }
+        }
+
+        .rectangle-container {
+            display: flex;
+            justify-content: flex-end;
+
+            @include for-desktop {
+                position: absolute;
+                top: 0px;
+                right: 10px;
+            }
+
+            .rectangle {
+                margin-top: 15px;
+                width: 225px;
+                height: 225px;
+                border-radius: 50%;
+                background-color: map-get($colors, orange );
+                display: flex;
+                align-items: center;
+
+                // @include for-desktop {
+                //     width: 350px;
+                //     height: 350px;
+                // }
+
+                // @include for-large-desktop {
+                //     width: 429px;
+                //     height: 429px;
+                // }
+    
+                &-content {
+                    text-align: center;
+                    padding: 10px 30px 0px;
+                    color: map-get($colors, gray );
+                    @include md-content;
+                    font-size: 11px;
+                    font-weight: 600;
+
+                    // @include for-desktop {
+                    //     @include lg-content;
+                    //     font-weight: 600;
+                    //     max-width: 315px;
+                    //     margin: 0 auto;
+                    // }
+                }
+            }  
+        }
+    }
+
+    .bg-vector {
+        position: absolute;
+        width: 1234.199px;
+        height: 645.677px;
+        top: -228px;
+        left: -245px;
+
+        @include for-desktop {
+            width: 1483.594px;
+            height: 776.546px;
+            top: -128px;
+            left: -407px;
+        }
+    }
+}

@@ -63,15 +63,11 @@ const ExistBiz = () => {
             </div>
             <div className='research'>
                 <h3 className='research-title'>{research.title}</h3>
-                <div className='research-subtitle'>
-                    <img src={sketch} alt='sketch' />
-                    <p>{research.subtitleOne}</p>
-                </div>
                 <p className='research-nested-subtitle-biz'>{research.subtitleOne}</p>
                 <div className='research-list-one'>
                     {/* tu będą kafelki */}
                 </div>
-                <p className='research-nested-subtitle-mark'>{research.subtitleOne}</p>
+                <p className='research-nested-subtitle-mark'>{research.subtitleTwo}</p>
                 <div className='research-list-two'>
                     {/* tu będą kafelki */}
                 </div>
