@@ -89,6 +89,66 @@
         }
     }
 
+    .research {
+        margin: 0 auto;
+        padding: 20px 38px 0px;
+        max-width: 450px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &-title {
+            @include md-title__mobile;
+            max-width: 210px;
+        }
+
+        &-nested-subtitle-biz, &-nested-subtitle-mark {
+            padding-top: 25px;
+            margin: 0 auto;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        &-list-one {
+            margin: 0 auto;
+            .rect{
+                width: 284px;
+                background-color: map-get($colors, violet );
+                border-radius: 55px;
+                margin: 13px;
+
+                &-text {
+                    padding: 30px 18px;
+                    text-align: center;
+                    @include md-content;
+                    color: map-get($colors, white );
+                    font-weight: 500;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        &-list-two {
+            margin: 0 auto;
+            .rect{
+                width: 284px;
+                background-color: map-get($colors, orange );
+                border-radius: 55px;
+                margin: 13px;
+
+                &-text {
+                    padding: 30px 18px;
+                    text-align: center;
+                    @include md-content;
+                    color: map-get($colors, white );
+                    font-weight: 500;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
     .bg-vector {
         position: absolute;
         width: 1234.199px;

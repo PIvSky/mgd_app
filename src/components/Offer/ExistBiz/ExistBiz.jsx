@@ -65,11 +65,20 @@ const ExistBiz = () => {
                 <h3 className='research-title'>{research.title}</h3>
                 <p className='research-nested-subtitle-biz'>{research.subtitleOne}</p>
                 <div className='research-list-one'>
-                    {/* tu będą kafelki */}
+                    {research.businessList.map((item, index) => (
+                        <div className='rect' key={index}>
+                          <p className='rect-text'>{item}</p>
+                        </div>
+                    ))}
+                    
                 </div>
                 <p className='research-nested-subtitle-mark'>{research.subtitleTwo}</p>
                 <div className='research-list-two'>
-                    {/* tu będą kafelki */}
+                    {research.marketingList.map((item, index) => (
+                        <div className='rect' key={index}>
+                          <p className='rect-text'>{item}</p>
+                        </div>
+                    ))}
                 </div>
             </div>                
             <div className='benefits'>
