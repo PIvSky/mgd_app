@@ -62,7 +62,30 @@ const NewBiz = () => {
             "Powtarzalne narzędzia do prowadzenia biznesu (np. P&L, procesy, standardy)",
             'Rozwinięcie i materializacja (down-to-earth) pomysłów / konceptów / wizji klienta',
             'Doradztwo ad-hoc na wybrane dylematy / pytania klienta'
-        ]
+        ],
+        subtitleTwo: 'Jakie bezpośrednie korzyści otrzymasz we współpracując z nami:',
+        nestedSubtitleOne: 'Operacyjne:',
+        nestedSubtitleTwo: 'Marketingowe:',
+        listTwo : [
+            'Strategia, koncepcja i biznes plan',
+            'Możliwości rozmowy z partnerami merytorycznymi, najlepszymi praktykami branży gastronomicznej',
+            'Action plan wraz z priorytetyzacją poszczególnych elementów dla nowootwieranych biznesów',
+            'Zarządzanie najważniejszymi procesami przy otwarciu / project management',
+            'Wybór lokalizacji',
+            'Doradztwo w wyborze podwykonawców',
+            'Doradztwo w zakresie przygotowania projektu technologicznego oraz księgi haccp',
+            'Timeline realizacji projektu',
+            'Doradztwo w zakresie wyboru sprzętu gastronomicznego dostosowanego do potrzeb klienta',
+            'Wsparcie w rekrutacji',
+            'Przeszkolenie zespołu sprzedażowego'
+        ],
+        listThree : [
+            'Dobór kanałów do komunikacji dla klienta',
+            'Brand foundation',
+            'Przygotowanie wskazań do konsumenckiej percepcji marki',
+            'Strategia marketingowa',
+            'Strategia social media'
+        ],
     };
 
     return (
@@ -107,10 +130,26 @@ const NewBiz = () => {
                     </ul>
                 </div>
                 <div className='subtitle-two'>
-                    
+                    <img src={sketch} alt='sketch' />
+                    <p>{report.subtitleTwo}</p>
+                </div>
+                <p className='nested-subtitle'>{report.nestedSubtitleOne}</p>
+                <div className='list-two'>
+                    <ul>
+                    {report.listTwo.map((index, key)=> (
+                        <li key={key}>{index}</li>
+                    ))}
+                    </ul>
+                </div>
+                <p className='nested-subtitle'>{report.nestedSubtitleTwo}</p>
+                <div className='list-three'>
+                    <ul>
+                    {report.listThree.map((index, key)=> (
+                        <li key={key}>{index}</li>
+                    ))}
+                    </ul>
                 </div>
             </div>
-
             <VectorBg className='bg-vector'/>
         </div>        
     )

@@ -115,7 +115,7 @@
 
     .report {
         margin: 0 auto;
-        padding-inline: 38px;
+        padding: 0px 38px 70px;
         max-width: 450px;
 
         &-title {
@@ -124,7 +124,7 @@
             font-weight: 600;
         }
 
-        .subtitle-one {
+        .subtitle-one, .subtitle-two {
             display: flex;
             flex-direction: row;
             padding-top: 20px;
@@ -135,7 +135,14 @@
             }
         }
 
-        .list-one {
+        .nested-subtitle {
+            @include md-content;
+            font-weight: 500;
+            padding-left: 50px;
+            padding-top: 15px;
+        }
+
+        .list-one, .list-two, .list-three {
             padding-top: 21px;
             padding-left: 100px;
             ul {
