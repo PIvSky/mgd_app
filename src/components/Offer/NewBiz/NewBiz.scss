@@ -1,0 +1,166 @@
+@import '../../../styles/typography';
+@import '../../../styles/colors';
+@import '../../../styles/z-index';
+@import '../../../styles/mediaQueries';
+
+.new-biz {
+    overflow: hidden;
+    position: relative;
+
+    .main-container {
+        margin: 0 auto;
+        padding-inline: 38px;
+        max-width: 450px;
+
+        .title {
+            @include lg-title__mobile;
+            padding-top: 25px;
+            width: 185px;
+        }
+
+        .rectangle-container {
+            display: flex;
+            justify-content: flex-end;
+            .rectangle {
+                margin-top: 15px;
+                width: 225px;
+                height: 225px;
+                border-radius: 225px;
+                background-color: map-get($colors, orange );
+                display: flex;
+                align-items: center;
+    
+                &-content {
+                    text-align: center;
+                    padding: 30px;
+                    color: map-get($colors, gray );
+                    @include md-content;
+                    font-weight: 600;
+                }
+            }  
+        }
+
+        .text {  
+            margin: 0 auto;
+            padding-inline: 38px;
+            max-width: 450px;
+            
+            &-one {
+                @include md-content;
+                font-weight: 500;
+                padding-top: 31px;
+            }
+
+            &-two {
+                @include md-content;
+                font-weight: 500;
+                padding-top: 15px;
+                padding-left: 60px;
+            }
+        }
+    }
+
+    .desc {
+        margin: 0 auto;
+        padding-inline: 38px;
+        max-width: 450px;
+
+        &-title {
+            padding-top: 30px;
+            @include md-title__mobile;
+            font-weight: 600;
+        }
+
+        &-subtitle {
+            @include md-content;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+
+        .inforgraphic-container {
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .graf-card {
+                padding-top: 21px;
+                padding-right: 20px;
+                width: 126px;
+
+                .graf-rect {
+                    width: 126px;
+                    height: 126px;
+                    border-radius: 50%;
+                    background-color: map-get($colors, violet );
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        scale: 0.5;
+                    }
+                }
+                
+                .graf-text {
+                    @include md-content;
+                    text-align: center;
+                    font-weight: 500;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    .report {
+        margin: 0 auto;
+        padding: 0px 38px 70px;
+        max-width: 450px;
+
+        &-title {
+            padding-top: 55px;
+            @include md-title__mobile;
+            font-weight: 600;
+        }
+
+        .subtitle-one, .subtitle-two {
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+
+            p {
+                @include md-content;
+                font-weight: 600;
+            }
+        }
+
+        .nested-subtitle {
+            @include md-content;
+            font-weight: 500;
+            padding-left: 50px;
+            padding-top: 15px;
+        }
+
+        .list-one, .list-two, .list-three {
+            padding-top: 21px;
+            padding-left: 100px;
+            ul {
+                list-style: circle;
+                list-style-type: disc;
+                li {
+                    @include md-content;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .bg-vector {
+        position: absolute;
+        width: 1234.199px;
+        height: 645.677px;
+        top: -228px;
+        left: -245px;
+    }
+}
