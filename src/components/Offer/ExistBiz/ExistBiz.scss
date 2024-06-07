@@ -49,7 +49,7 @@
             @include for-desktop {
                 position: absolute;
                 top: 0px;
-                right:80px;
+                right: 45px;
             }
 
             .rectangle {
@@ -148,7 +148,7 @@
             }
 
             .rect {
-                width: 284px;
+                width: 100%;
                 background-color: map-get($colors, violet );
                 border-radius: 55px;
                 margin: 13px;
@@ -179,6 +179,7 @@
             margin: 0 auto;
 
             @include for-desktop {
+                margin: 0;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -187,7 +188,7 @@
             }
 
             .rect {
-                width: 284px;
+                width: 100%;
                 background-color: map-get($colors, orange );
                 border-radius: 55px;
                 margin: 13px;
@@ -219,7 +220,7 @@
         max-width: 450px;
 
         @include for-desktop {
-            padding: 62px 100px 0px 102px;
+            padding: 62px 100px 0px 48px;
             max-width: 755px;
             position: relative;
         }
@@ -242,6 +243,7 @@
                 @include md-content;
                 padding-top: 8px;
                 font-weight: 600;
+                max-width: 250px;
             }
         }
 
