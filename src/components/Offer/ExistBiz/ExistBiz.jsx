@@ -10,7 +10,7 @@ const ExistBiz = () => {
     };
 
     const research = {
-        title: 'Przejdziemy proces dokładnej diagnozy i badanaia potrzeb, analizując m.in:',
+        title: 'Przejdziemy proces dokładnej diagnozy i badania potrzeb, analizując m.in:',
         subtitleOne: 'Działalność biznesową',
         subtitleTwo: 'Działalność marketingową',
         businessList : [
@@ -19,7 +19,7 @@ const ExistBiz = () => {
             'Ewaluacja, badanie kondycji sprzedaży i dokumentów sprzedaży: raport wraz z oceną',
             'Ewaluacja, badanie lokalizacji (usytuowanie, wystrój, ułożenie, prezentacja produktów itp.)',
             'Badanie elastyczności cenowej w danej kategorii (np. restauracja) i segmencie (np. mainstream, fine dining, średnia półka)',
-            'Analiza kadr – płace, kompetencje i efektywność sprzedażowa',
+            'Analiza kadr - płace, kompetencje i efektywność sprzedażowa',
             'Rekrutacja i szkolenie kadr',
             'Analiza kosztów i rentowności klienta (FC_BC_LC)',
             'Analiza wydajności pracowników',
