@@ -1,0 +1,55 @@
+@import '../../../styles/typography';
+@import '../../../styles/colors';
+@import '../../../styles/z-index';
+@import '../../../styles/mediaQueries';
+
+.modern-tools {
+    overflow: hidden;
+    position: relative;
+
+    .main {
+        margin: 0 auto;
+        padding: 25px 38px;
+        max-width: 450px;
+
+        &-title {
+            @include md-title__mobile;
+            width: 70%;
+        }
+
+        &-subtitle {
+            @include md-content;
+            padding-top: 10px;
+            font-weight: 500;
+            width: 70%;
+        }
+    }
+
+    .list {
+        margin: 0 auto;
+        padding-inline: 38px;
+        max-width: 450px;
+
+        &-rect {
+
+            &-text {
+
+            }
+        }
+    }
+
+    .bg-vector {
+        position: absolute;
+        width: 1234.199px;
+        height: 645.677px;
+        top: -228px;
+        left: -245px;
+
+        @include for-desktop {
+            width: 1483.594px;
+            height: 776.546px;
+            top: -128px;
+            left: -407px;
+        }
+    }
+}
