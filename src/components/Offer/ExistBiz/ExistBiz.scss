@@ -140,8 +140,14 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
+            // TODO: nie do końca jest ten efekt co w projekcie, ale nie mam innego pomysłu na razie.
 
-            .rect{
+            @include for-desktop {
+                justify-content: space-around;
+            }
+
+            .rect {
                 width: 284px;
                 background-color: map-get($colors, violet );
                 border-radius: 55px;
@@ -152,6 +158,8 @@
                     align-items: center;
                     justify-content: center;
                     width: auto;
+                    flex: 0 1 calc(50% - 26px);
+                    box-sizing: border-box;
                 }
                 
 
@@ -163,9 +171,6 @@
                     font-weight: 500;
                     line-height: 18px;
 
-                    @include for-desktop {
-                        
-                    }
                 }
             }
         }
@@ -173,11 +178,28 @@
         &-list-two {
             margin: 0 auto;
 
+            @include for-desktop {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                justify-content: space-around;
+            }
+
             .rect {
                 width: 284px;
                 background-color: map-get($colors, orange );
                 border-radius: 55px;
                 margin: 13px;
+
+                @include for-desktop {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: auto;
+                    flex: 0 1 calc(50% - 26px);
+                    box-sizing: border-box;
+                }
 
                 &-text {
                     padding: 30px 18px;
@@ -197,8 +219,7 @@
         max-width: 450px;
 
         @include for-desktop {
-            margin: 0;
-            padding: 186px 100px 0px 102px;
+            padding: 62px 100px 0px 102px;
             max-width: 755px;
             position: relative;
         }
@@ -213,9 +234,9 @@
             flex-direction: row;
             padding-top: 20px;
 
-            // @include for-desktop {
-            //     padding-left: 78px;
-            // }
+            @include for-desktop {
+                padding-left: 78px;
+            }
 
             p {
                 @include md-content;
@@ -229,19 +250,19 @@
             font-weight: 500;
             padding-left: 50px;
 
-            // @include for-desktop {
-            //     padding-left: 160px;
-            //     padding-bottom: 20px;
-            // }
+            @include for-desktop {
+                padding-left: 160px;
+                padding-bottom: 20px;
+            }
         }
 
         .list-one, .list-two {
             padding: 21px 0px 20px 85px;
 
-            // @include for-desktop {
-            //     padding-top: 0px;
-            //     padding-left: 198px;
-            // }
+            @include for-desktop {
+                padding-top: 0px;
+                padding-left: 198px;
+            }
 
             ul {
                 list-style: circle;
