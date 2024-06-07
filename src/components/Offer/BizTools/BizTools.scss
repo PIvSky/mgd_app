@@ -10,6 +10,7 @@
     .main {
         margin: 0 auto;
         padding: 25px 38px;
+        padding-bottom: 0px;
         max-width: 450px;
 
         &-title {
@@ -27,13 +28,22 @@
 
     .list {
         margin: 0 auto;
-        padding-inline: 38px;
+        padding: 20px 38px;
         max-width: 450px;
 
         &-rect {
+            width: 100%;
+            background-color: map-get($colors, violet );
+            border-radius: 55px;
+            margin-block: 13px;
 
             &-text {
-
+                padding: 30px 18px;
+                text-align: center;
+                @include md-content;
+                color: map-get($colors, white );
+                font-weight: 500;
+                line-height: 18px;
             }
         }
     }
