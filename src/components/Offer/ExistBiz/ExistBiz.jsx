@@ -82,7 +82,7 @@ const ExistBiz = () => {
                 </div>
             </div>                
             <div className='benefits'>
-                <div className='subtitle-two'>
+                <div className='subtitle'>
                     <img src={sketch} alt='sketch' />
                     <p>{benefits.subtitle}</p>
                 </div>

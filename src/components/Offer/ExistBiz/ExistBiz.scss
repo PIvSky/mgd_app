@@ -149,6 +149,57 @@
         }
     }
 
+    .benefits {
+        margin: 0 auto;
+        padding: 20px 38px 0px;
+        max-width: 450px;
+
+        .subtitle {
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+
+            // @include for-desktop {
+            //     padding-left: 78px;
+            // }
+
+            p {
+                @include md-content;
+                padding-top: 8px;
+                font-weight: 600;
+            }
+        }
+
+        .nested-subtitle {
+            @include md-content;
+            font-weight: 500;
+            padding-left: 50px;
+
+            // @include for-desktop {
+            //     padding-left: 160px;
+            //     padding-bottom: 20px;
+            // }
+        }
+
+        .list-one, .list-two {
+            padding: 21px 0px 20px 85px;
+
+            // @include for-desktop {
+            //     padding-top: 0px;
+            //     padding-left: 198px;
+            // }
+
+            ul {
+                list-style: circle;
+                list-style-type: disc;
+                li {
+                    @include md-content;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
     .bg-vector {
         position: absolute;
         width: 1234.199px;
