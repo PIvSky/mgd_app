@@ -6,6 +6,7 @@ import pic3 from '../../../assets/research/pic3.png';
 import pic4 from '../../../assets/research/pic4.png';
 import pic5 from '../../../assets/research/pic5.png';
 import pic6 from '../../../assets/research/pic6.png';
+import {insertLineBreaks} from '../../../util/utility'
 
 const Research = () => {
 
@@ -13,8 +14,8 @@ const Research = () => {
         title: 'Badania rynku i trendy',
         descOne: 'Wyrusz z nami w inspiracyjną podróż. Jeden z naszych ekspertów będzie towarzyszyć ci podczas wyjazdu w poszukiwaniu najlepszych światowych inspiracji, do miejsca, które wybierzemy na podstawie Twoich preferencji',
         descTwo: 'Na zakończenie otrzymasz od nas pełny raport trendowy wraz z zdjęciami inspiracyjnymi i klarowną wizją, w którą stronę powinieneś zmierzać oraz jak przenieść te inspiracje na płaszczyznę rzeczywistości.',
-        circleOne: 'Nie wiesz, od czego zacząć? Jak zbierać potrzebne dane i co może cię zainspirować? Gdzie znaleźć wiedzę i informacje na temat tego, jaki rodzaj biznesu powinieneś otworzyć na rodzimym rynku?',
-        circleTwo: 'Chcesz dowiedzieć się więcej? Napisz do nas!',
+        circleOne: 'Nie wiesz, od czego zacząć?\n Jak zbierać potrzebne dane i co może cię zainspirować? \nGdzie znaleźć wiedzę i informacje na temat tego, jaki rodzaj biznesu powinieneś otworzyć na rodzimym rynku?',
+        circleTwo: 'Chcesz dowiedzieć się więcej? \n Napisz do nas!',
         pic: [pic1, pic2, pic3, pic4, pic5, pic6]
     }
 
@@ -24,7 +25,7 @@ const Research = () => {
                 <h3 className='research-main-title'>{data.title}</h3>
                 <div className='circle-container'>
                     <div className='circle'>
-                        <p className='circle-content'>{data.circleOne}</p>
+                        <p className='circle-content'>{insertLineBreaks(data.circleOne)}</p>
                     </div>
                 </div>
             </div>
@@ -35,7 +36,7 @@ const Research = () => {
             <div className='research-pic'>
                 <div className='circle-container'>
                     <div className='circle'>
-                        <p className='circle-content'>{data.circleTwo}</p>
+                        <p className='circle-content'>{insertLineBreaks(data.circleTwo)}</p>
                     </div>
                 </div>
                 <div className='pic-container'>
