@@ -13,9 +13,26 @@
         padding-bottom: 0px;
         max-width: 450px;
 
+        @include for-desktop {
+            margin: 0;
+            padding-left: 102px;
+            padding-right: 100px;
+            max-width: 755px;
+        }
+
+        @include for-large-desktop {
+            margin: 0 auto;
+            max-width: 1115px
+        }
+
         &-title {
             @include md-title__mobile;
             width: 70%;
+
+            @include for-desktop {
+                @include lg-title;
+                width: 90%;
+            }
         }
 
         &-subtitle {
@@ -31,11 +48,35 @@
         padding: 20px 38px;
         max-width: 450px;
 
+        @include for-desktop {
+            margin: 0;
+            padding: 20px 102px 60px 100px;
+            max-width: 755px;
+
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include for-large-desktop {
+            margin: 0 auto;
+            max-width: 1115px
+        }
+
         &-rect {
             width: 100%;
             background-color: map-get($colors, violet );
             border-radius: 55px;
             margin-block: 13px;
+
+            @include for-desktop {
+                width: 200px;
+                margin-inline: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
             &-text {
                 padding: 30px 18px;
@@ -44,6 +85,10 @@
                 color: map-get($colors, white );
                 font-weight: 500;
                 line-height: 18px;
+
+                @include for-desktop {
+                    padding-block: 10px;
+                }
             }
         }
     }
