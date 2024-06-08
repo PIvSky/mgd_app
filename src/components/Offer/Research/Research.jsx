@@ -33,7 +33,18 @@ const Research = () => {
                 <p className='researc-desc-two'>{data.descTwo}</p>
             </div>
             <div className='research-pic'>
-                {}
+                <div className='circle-container'>
+                    <div className='circle'>
+                        <p className='circle-content'>{data.circleTwo}</p>
+                    </div>
+                </div>
+                <div className='pic-container'>
+                    {data.pic.map((element, index) => (
+                        <div className='circle' key={index}>
+                            <img className='circle-img' src={element} alt='pic' />
+                        </div>
+                    ))}
+                </div>
             </div>
             <VectorBg className='bg-vector'/>
         </div>
