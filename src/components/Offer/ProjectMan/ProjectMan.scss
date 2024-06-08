@@ -1,0 +1,30 @@
+@import '../../../styles/typography';
+@import '../../../styles/colors';
+@import '../../../styles/z-index';
+@import '../../../styles/mediaQueries';
+
+.proman {
+
+    &-main {
+
+    }
+    
+    &-list {
+        
+    }
+
+    .bg-vector {
+        position: absolute;
+        width: 1234.199px;
+        height: 645.677px;
+        top: -228px;
+        left: -245px;
+
+        @include for-desktop {
+            width: 1483.594px;
+            height: 776.546px;
+            top: -128px;
+            left: -407px;
+        }
+    }
+}
