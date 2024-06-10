@@ -1,0 +1,97 @@
+@import '../../styles/typography';
+@import '../../styles/colors';
+@import '../../styles/z-index';
+@import '../../styles/mediaQueries';
+
+.contact {
+    overflow: hidden;
+    position: relative;
+
+    &-main {
+        margin: 0 auto;
+        padding: 25px 38px;
+        padding-bottom: 0px;
+        max-width: 450px;
+
+        @include for-desktop {
+            margin: 0;
+            padding-left: 102px;
+            padding-right: 100px;
+            max-width: 755px;
+        }
+
+        @include for-large-desktop {
+            margin: 0 auto;
+            max-width: 1115px
+        }
+
+        &-title {
+            width: 215px;
+            @include lg-title__mobile;
+
+            @include for-desktop {
+                @include lg-title;
+                width: 542px;
+            }
+        }
+
+        .circle-phone, .circle-email {
+            width: 205px;
+            height: 205px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include for-desktop {
+                width: 295px;
+                height: 295px;
+            }
+
+            &-content {
+                @include content-regular;
+                color: map-get($colors, beige );
+
+                @include for-desktop {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .circle-phone {
+            background-color: map-get($colors, orange );
+            margin-top: 63px;
+
+            @include for-desktop {
+                margin-left: 25%;
+            }
+        }
+
+        .circle-email { 
+            background-color: map-get($colors, violet );
+            position: relative;
+            margin-left: auto;
+
+            @include for-large-desktop {
+                position: absolute;
+                top: 100px;
+                right: 100px;
+            }
+        }
+    }
+
+    .bg-vector {
+        position: absolute;
+        width: 1234.199px;
+        height: 645.677px;
+        top: -228px;
+        left: -245px;
+
+        @include for-desktop {
+            width: 1483.594px;
+            height: 776.546px;
+            top: -128px;
+            left: -407px;
+        }
+    }
+}
