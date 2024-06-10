@@ -1,8 +1,11 @@
 import './Home.scss';
 import VectorBg from '../Assets/VectorBg/VectorBg';
-import { insertLineBreaks } from '../../util/utility'
+import { insertLineBreaks } from '../../util/utility';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+
+    const navigate = useNavigate();
 
     const content = {
         mobile : {
@@ -19,6 +22,10 @@ const Home = () => {
             quote: "Proces jest ważniejszy niż wynik.\n Skupienie się na procesie prowadzi \ndo lepszych wyników w dłuższym czasie",
             author: 'Shane Parrish'
         },
+    }
+
+    const navigateContact = () => {
+        navigate('/contact');
     }
 
     return (
@@ -46,7 +53,7 @@ const Home = () => {
                     </div>
                     <div className='home-circle__desktop__orange'>
                         <p>{content.desktop.contact.question}</p>
-                        <button>{insertLineBreaks(content.desktop.contact.button)}</button>
+                        <button onClick={navigateContact}>{insertLineBreaks(content.desktop.contact.button)}</button>
                     </div>
                     <div className='home-circle__desktop__violet'/>
                     <div className='home-quote__desktop'>
