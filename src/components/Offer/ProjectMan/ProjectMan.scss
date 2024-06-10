@@ -27,6 +27,11 @@
 
         &-title {
             @include lg-title__mobile;
+
+            @include for-desktop {
+                @include lg-title;
+                max-width: 900px;
+            }
         }
 
         &-content {
@@ -40,6 +45,12 @@
             }
             &:nth-child(4) {
                 padding-top: 15px;
+            }
+
+            @include for-desktop {
+                font-size: 14px;
+                font-weight: 600;
+                max-width: 630px;
             }
         }
     }
@@ -55,6 +66,12 @@
             padding-left: 102px;
             padding-right: 100px;
             max-width: 755px;
+
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // TODO: inperfect behaviour of list's elements
         }
 
         @include for-large-desktop {
@@ -62,30 +79,49 @@
             max-width: 1115px
         }
 
-        .circle-title {
-            text-align: center;
-            @include md-content;
-            padding-bottom: 10px;
-        }
+        .card {
+            @include for-desktop{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-right: 10px;
+            }
 
-        .circle {
-            margin: 0px auto 27px;
-            max-width: 350px;
-            height: 154px;
-            border-radius: 80px;
-            background-color: map-get($colors, violet );
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &-content {
-                @include md-content;
-                font-weight: 500;
-                padding-inline: 30px;
+            .circle-title {
                 text-align: center;
-                color: map-get($colors, beige );
+                @include md-content;
+                padding-bottom: 10px;
+
+                @include for-desktop {
+                    text-align: start;
+                }
+            }
+    
+            .circle {
+                margin: 0px auto 27px;
+                max-width: 350px;
+                height: 154px;
+                border-radius: 80px;
+                background-color: map-get($colors, violet );
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                @include for-desktop {
+                    height: 126px;
+                    width: 430px;
+                }
+    
+                &-content {
+                    @include md-content;
+                    font-weight: 500;
+                    padding-inline: 30px;
+                    text-align: center;
+                    color: map-get($colors, beige );
+                }
             }
         }
+        
     }
 
     .bg-vector {
