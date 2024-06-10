@@ -173,6 +173,11 @@
                         width: 258px;
                         border-radius: 37px;
                         border: none;
+                        transition: 700ms ease-in-out;
+                        &:hover {
+                            scale: 1.1;
+                            cursor: pointer
+                        }
                     }
                 }
     
