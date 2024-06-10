@@ -4,13 +4,89 @@
 @import '../../../styles/mediaQueries';
 
 .proman {
+    overflow: hidden;
+    position: relative;
 
     &-main {
+        margin: 0 auto;
+        padding: 25px 38px;
+        padding-bottom: 0px;
+        max-width: 450px;
 
+        @include for-desktop {
+            margin: 0;
+            padding-left: 102px;
+            padding-right: 100px;
+            max-width: 755px;
+        }
+
+        @include for-large-desktop {
+            margin: 0 auto;
+            max-width: 1115px
+        }
+
+        &-title {
+            @include lg-title__mobile;
+        }
+
+        &-content {
+            width: 90%;
+            padding-top: 15px;
+            @include content-regular;
+            font-size: 12px;
+            font-weight: 500;
+            &:nth-child(3) {
+                padding-top: 15px;
+            }
+            &:nth-child(4) {
+                padding-top: 15px;
+            }
+        }
     }
     
     &-list {
-        
+        padding-top: 34px;
+        margin: 0 auto;
+        padding: 25px 38px;
+        padding-bottom: 0px;
+        max-width: 450px;
+
+        @include for-desktop {
+            margin: 0;
+            padding-left: 102px;
+            padding-right: 100px;
+            max-width: 755px;
+        }
+
+        @include for-large-desktop {
+            margin: 0 auto;
+            max-width: 1115px
+        }
+
+        .circle-title {
+            text-align: center;
+            @include md-content;
+            padding-bottom: 10px;
+        }
+
+        .circle {
+            margin: 0px auto 27px;
+            max-width: 350px;
+            height: 154px;
+            border-radius: 80px;
+            background-color: map-get($colors, violet );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-content {
+                @include md-content;
+                font-weight: 500;
+                padding-inline: 30px;
+                text-align: center;
+                color: map-get($colors, beige );
+            }
+        }
     }
 
     .bg-vector {
