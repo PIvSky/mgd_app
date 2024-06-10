@@ -50,12 +50,12 @@ const ProjectMan = () => {
             </div>
             <div className='proman-list'>
                 {data.list.map((element, index) => (
-                    <>
+                    <div className='card'>
                         <h3 className='circle-title'>{element.title}</h3>
                         <div className='circle' key={index}>
                             <p className='circle-content'>{element.content}</p>
                         </div>
-                    </>
+                    </div>
                 ))}
             </div>
             <VectorBg className='bg-vector'/>
