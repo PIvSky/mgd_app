@@ -22,7 +22,7 @@ const Home = () => {
     }
 
     return (
-        <>
+        <div className='home-wrapper'>
             <div className='home mobile'>
                 <div className='home-content'>
                     <p className='home-content__element'>{insertLineBreaks(content.mobile.main)}
@@ -37,7 +37,6 @@ const Home = () => {
                     <p>"{content.mobile.quote}"</p>
                     <p>{content.mobile.author}</p>
                 </div>
-                <VectorBg className='bg-vector'/>
             </div> 
             <div className='home-desktop'>
                 <div className='home-grid'>
@@ -55,10 +54,9 @@ const Home = () => {
                         <p>{content.desktop.author}</p>
                     </div>
                 </div>
-                <VectorBg className='bg-vector'/>
-                {/* TODO: bg-vector jest pod nav-conteiner - do rozwiązania w przyszłości */}
             </div>
-        </>
+            <VectorBg className='bg-vector'/>
+        </div>
     )
 }
 
