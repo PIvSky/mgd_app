@@ -8,8 +8,7 @@
     overflow: hidden;
     position: relative;
     padding-bottom: 20px;
-    height: 100lvh;
-    // TODO: nie jestem przekonany co do tego 100lvh, ale bez niego ucinał mi bg-vector
+    min-height: 100lvh;
 
     .blog-content {
         margin: 0 auto;
@@ -64,17 +63,5 @@
                 @include md-content;
             }
         }     
-    }
-    .bg-vector {
-        position: absolute;
-        top: -118px;
-        left: -245px;
-        @include vector-sm;
-
-        @include for-desktop {
-            @include vector-lg;
-            top: -198px;
-            left: -408px;
-        } 
-    }  
+    } 
 }
