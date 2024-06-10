@@ -20,7 +20,7 @@ const Blog = () => {
             <div className='blog-content'>
                 {blogContent.map((item, index) => (
                     <div className='video-container' key={index}>
-                        <div className='video-frame'>{/* TODO: tutaj będzie zagnieżdżone video */}</div>
+                        <div className='video-frame'></div>
                         <h2 className='video-title'>{item.title}</h2>
                         <p className='video-content'>{item.content}</p>
                     </div>
