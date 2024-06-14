@@ -118,6 +118,10 @@
                     padding-inline: 30px;
                     text-align: center;
                     color: map-get($colors, beige );
+
+                    @include for-desktop {
+                        padding-inline: 45px;
+                    }
                 }
             }
         }
