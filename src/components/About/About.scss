@@ -5,6 +5,9 @@
 @import '../../styles/mediaQueries';
 
 .about {
+    overflow: hidden;
+    position: relative;
+    
     .bio {
         &-content {
             display: flex;
@@ -70,7 +73,11 @@
 
             .grid-wrapper {
                 max-width: 415px;
-                padding-left: 53px;
+
+                @include for-desktop {
+                    padding-left: 53px;
+                }
+                
 
                 .bio-content-element {
                     padding-top: 29px;

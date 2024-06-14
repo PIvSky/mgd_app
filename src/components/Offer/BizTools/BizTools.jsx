@@ -22,7 +22,6 @@ const BizTools = () => {
         ]
     }
         
-
     return (
         <div className='modern-tools'>
             <div className='main'>

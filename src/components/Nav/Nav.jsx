@@ -89,7 +89,7 @@ const Nav = () => {
 
     return (
       <header className="header">
-        <img className='header-logo__mobile' src={mikaLogoMobile} alt='background-vector' />
+        <img className='header-logo__mobile' src={mikaLogoMobile} alt='background-vector' onClick={navigateHome}/>
         <img className='header-logo__desktop' src={mikaLogoDesktop} alt='background-vector' onClick={navigateHome}/>
         <nav className="nav-container" ref={navRef}>
             <ul className="nav-list">

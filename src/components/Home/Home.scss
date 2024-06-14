@@ -3,228 +3,219 @@
 @import '../../styles/z-index';
 @import '../../styles/mediaQueries';
 
-// TODO: ewentualnie do poprawy responsywność dla tabletu
-
-.home-desktop {
-    display: none;
-}
-
-.home {
-    padding-top: 114px;
-    width: 100%;
+.home-wrapper {
     position: relative;
     overflow: hidden;
 
-    &-content {
-        padding: 0px 0px 0px 38px;
-        width: 251px;
-
-        @media screen and (min-width: 550px) and (max-width: 650px) {
-            padding-left: 68px;
-        }
-        @media screen and (min-width: 650px) and (max-width: 768px) {
-            padding-left: 128px;
-        }
-    
-        &__element {
-            @include md-content;
-            font-size: 20px;
-        } 
-    }
-
-    &-circle__violet,
-    &-circle__violet__second,
-    &-circle__orange {
-        width: 279px;
-        height: 279px;
-        border-radius: 50%;
-    }
-
-    &-circle__violet {
-        position: absolute;
-        z-index: map-get($z-index, violec-circle );
-        top: 86px;
-        right: -180px;
-        background-color: map-get($colors , violet );
-        @media screen and (min-width: 550px) and (max-width: 650px) {
-            right: -100px;
-        }
-        @media screen and (min-width: 650px) and (max-width: 768px) {
-            right: -60px;
-        }
-    }
-
-    &-circle__violet__second {
-        position: absolute;
-        top: 326px;
-        right: 94%;
-        background-color: map-get($colors , violet );
-    }
-
-    &-circle__orange {
-        margin: 0 auto;
-        margin-top: 30px;
-        background-color: map-get($colors , orange );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        p {
-            @include md-content;
-            font-size: 26px;
-            text-align: center;
-            padding-inline: 35px;
-            color: map-get($colors, beige );
-        }
-    }
-
-    &-quote {
-        padding-top: 35px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 70%;
-        max-width: 400px;
-        p {
-            text-align: center;
-            @include content-italic;
-        }
-
-        p:nth-child(2) {
-            padding-top: 10px;
-            padding-bottom: 41px;
-        }
-    }
-    .bg-vector {
-        position: absolute;
-        width: 1234.199px;
-        height: 645.677px;
-        top: -58px;
-        left: -245px;
-    }
-    
-}
-
-@include for-desktop {
-
-    .mobile {
+    .home-desktop {
         display: none;
     }
-
-    .home-desktop {
-        margin: 0 auto;
-        max-width: 1300px;
-        display: block;
+    
+    .home {
+        padding-top: 114px;
+        width: 100%;
         position: relative;
-
-        .home-grid {
-            overflow: hidden;
+    
+        &-content {
+            padding: 0px 0px 0px 38px;
+            width: 251px;
+    
+            @media screen and (min-width: 550px) and (max-width: 650px) {
+                padding-left: 68px;
+            }
+            @media screen and (min-width: 650px) and (max-width: 768px) {
+                padding-left: 128px;
+            }
+        
+            &__element {
+                @include md-content;
+                font-size: 20px;
+            } 
+        }
+    
+        &-circle__violet,
+        &-circle__violet__second,
+        &-circle__orange {
+            width: 279px;
+            height: 279px;
+            border-radius: 50%;
+        }
+    
+        &-circle__violet {
+            position: absolute;
+            top: 86px;
+            right: -180px;
+            background-color: map-get($colors , violet );
+            @media screen and (min-width: 550px) and (max-width: 650px) {
+                right: -100px;
+            }
+            @media screen and (min-width: 650px) and (max-width: 768px) {
+                right: -60px;
+            }
+        }
+    
+        &-circle__violet__second {
+            position: absolute;
+            top: 326px;
+            right: 94%;
+            background-color: map-get($colors , violet );
+        }
+    
+        &-circle__orange {
+            margin: 0 auto;
+            margin-top: 30px;
+            background-color: map-get($colors , orange );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            p {
+                @include md-content;
+                font-size: 26px;
+                text-align: center;
+                padding-inline: 35px;
+                color: map-get($colors, beige );
+            }
+        }
+    
+        &-quote {
+            padding-top: 35px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            max-width: 400px;
+            p {
+                text-align: center;
+                @include content-italic;
+            }
+    
+            p:nth-child(2) {
+                padding-top: 10px;
+                padding-bottom: 41px;
+            }
+        }  
+    }
+    
+    @include for-desktop {
+    
+        .mobile {
+            display: none;
+        }
+    
+        .home-desktop {
+            margin: 0 auto;
+            max-width: 1300px;
+            display: block;
             position: relative;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            height: 100%;
-
-            .home-content__desktop {
-                grid-area: 1 / 1 / 2 / 2;
-                max-width: 443px;
-                padding: 36px 0px 0px 32px;
-
-                @media screen and (min-width: 875px) {
-                    padding: 36px 0px 0px 102px;
-                }
-                &__element {
-                    @include md-content;
-                    font-size: 16px;
-                    text-wrap: wrap;
-                    
+    
+            .home-grid {
+                overflow: hidden;
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                height: 100%;
+    
+                .home-content__desktop {
+                    grid-area: 1 / 1 / 2 / 2;
+                    max-width: 443px;
+                    padding: 36px 0px 0px 32px;
+    
                     @media screen and (min-width: 875px) {
-                        font-size: 20px;
+                        padding: 36px 0px 0px 102px;
+                    }
+                    &__element {
+                        @include md-content;
+                        font-size: 16px;
+                        text-wrap: wrap;
+                        
+                        @media screen and (min-width: 875px) {
+                            font-size: 20px;
+                        }
                     }
                 }
-            }
-
-            .home-circle__desktop__orange {
-                grid-area: 1 / 2 / 2 / 3;
-                position: relative;
-                width: 367px;
-                height: 367px;
-                margin-top: 0;
-                border-radius: 50%;
-                background-color: map-get($colors , orange );
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin: 0 auto;
-                margin-right: 32px;
-
-                @media screen and (min-width: 875px) {
-                    margin-right: 127px;
+    
+                .home-circle__desktop__orange {
+                    grid-area: 1 / 2 / 2 / 3;
+                    position: relative;
+                    width: 367px;
+                    height: 367px;
+                    margin-top: 0;
+                    border-radius: 50%;
+                    background-color: map-get($colors , orange );
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    margin-right: 32px;
+    
+                    @media screen and (min-width: 875px) {
+                        margin-right: 127px;
+                    }
+                    p {
+                        font-size: 14px;
+                        @include content-regular;
+                        color: map-get($colors, beige );
+                        padding-bottom: 9px;
+                    }
+                    button {
+                        background-color: map-get($colors, beige );
+                        color: map-get($colors , black );
+                        @include md-content;
+                        font-size: 14px;
+                        height: 70px;
+                        width: 258px;
+                        border-radius: 37px;
+                        border: none;
+                        transition: 700ms ease-in-out;
+                        &:hover {
+                            scale: 1.1;
+                            cursor: pointer
+                        }
+                    }
                 }
-                p {
+    
+                .home-circle__desktop__violet {
+                    grid-area: 2 / 1 / 3 / 2;
+                    position: absolute;
+                    width: 367px;
+                    height: 367px;
+                    border-radius: 50%;
+                    bottom: -100px;
+                    left: 32px;
+                    background-color: map-get($colors , violet );
+                    @media screen and (min-width: 875px) {
+                        left: 74px
+                    }
+                }
+    
+                .home-quote__desktop {
+                    padding-top: 82px;
+                    margin: 0 auto;
+                    margin-right: 32px;
+                    width: 300px;
+                    grid-area: 2 / 2 / 3 / 3;
+                    @include content-italic;
                     font-size: 14px;
-                    @include content-regular;
-                    color: map-get($colors, beige );
-                    padding-bottom: 9px;
-                }
-                button {
-                    background-color: map-get($colors, beige );
-                    color: map-get($colors , black );
-                    @include md-content;
-                    font-size: 14px;
-                    height: 70px;
-                    width: 258px;
-                    border-radius: 37px;
-                    border: none;
-                }
+                    @media screen and (min-width: 875px) {
+                        margin-right: 106px;
+                    }
+    
+                    p:nth-child(1){
+                        text-align: left;
+                    }
+                    p:nth-child(2){
+                        padding-top: 8px;
+                        text-align: right;
+                    }
+                }  
             }
-
-            .home-circle__desktop__violet {
-                grid-area: 2 / 1 / 3 / 2;
-                position: absolute;
-                width: 367px;
-                height: 367px;
-                border-radius: 50%;
-                bottom: -100px;
-                left: 32px;
-                background-color: map-get($colors , violet );
-                @media screen and (min-width: 875px) {
-                    left: 74px
-                }
-            }
-
-            .home-quote__desktop {
-                padding-top: 82px;
-                margin: 0 auto;
-                margin-right: 32px;
-                width: 300px;
-                grid-area: 2 / 2 / 3 / 3;
-                @include content-italic;
-                font-size: 14px;
-                @media screen and (min-width: 875px) {
-                    margin-right: 106px;
-                }
-
-                p:nth-child(1){
-                    text-align: left;
-                }
-                p:nth-child(2){
-                    padding-top: 8px;
-                    text-align: right;
-                }
-            }  
-        }
-        .bg-vector {
-            position: absolute;
-            width: 1483.594px;
-            height: 776.546px;
-            right: 92px;
-            top: -239px;          
         }
     }
 }

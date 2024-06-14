@@ -1,8 +1,11 @@
 import './Home.scss';
 import VectorBg from '../Assets/VectorBg/VectorBg';
-import { insertLineBreaks } from '../../util/utility'
+import { insertLineBreaks } from '../../util/utility';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+
+    const navigate = useNavigate();
 
     const content = {
         mobile : {
@@ -21,8 +24,12 @@ const Home = () => {
         },
     }
 
+    const navigateContact = () => {
+        navigate('/contact');
+    }
+
     return (
-        <>
+        <div className='home-wrapper'>
             <div className='home mobile'>
                 <div className='home-content'>
                     <p className='home-content__element'>{insertLineBreaks(content.mobile.main)}
@@ -37,7 +44,6 @@ const Home = () => {
                     <p>"{content.mobile.quote}"</p>
                     <p>{content.mobile.author}</p>
                 </div>
-                <VectorBg className='bg-vector'/>
             </div> 
             <div className='home-desktop'>
                 <div className='home-grid'>
@@ -47,7 +53,7 @@ const Home = () => {
                     </div>
                     <div className='home-circle__desktop__orange'>
                         <p>{content.desktop.contact.question}</p>
-                        <button>{insertLineBreaks(content.desktop.contact.button)}</button>
+                        <button onClick={navigateContact}>{insertLineBreaks(content.desktop.contact.button)}</button>
                     </div>
                     <div className='home-circle__desktop__violet'/>
                     <div className='home-quote__desktop'>
@@ -55,10 +61,9 @@ const Home = () => {
                         <p>{content.desktop.author}</p>
                     </div>
                 </div>
-                <VectorBg className='bg-vector'/>
-                {/* TODO: bg-vector jest pod nav-conteiner - do rozwiązania w przyszłości */}
             </div>
-        </>
+            <VectorBg className='bg-vector'/>
+        </div>
     )
 }
 

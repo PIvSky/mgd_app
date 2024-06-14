@@ -7,6 +7,7 @@ import logo4 from '../../assets/about/logo/bp.png';
 import person1 from '../../assets/about/people/people.png';
 import person2 from '../../assets/about/people/people.png';
 import person3 from '../../assets/about/people/people.png';
+import VectorBg from '../Assets/VectorBg/VectorBg';
 
 const About = () => {
 
@@ -101,7 +102,7 @@ const About = () => {
                     </div>     
                 </div>
             </div>
-            {/* TODO: dodaj background img */}
+            <VectorBg className='bg-vector'/>
         </div>
     )
 }
