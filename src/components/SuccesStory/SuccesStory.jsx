@@ -7,7 +7,7 @@ import bpwLogo from '../../assets/succesStory/bpw/bpw-logo.png'
 import charlotteImg from '../../assets/succesStory/charlotte/charlotte-img.png'
 import charlotteLogo from '../../assets/succesStory/charlotte/charlotte-logo.png'
 import bibendaImg from '../../assets/succesStory/bibenda/bibenda-img.png'
-import bibendaLogo from '../../assets/succesStory/bibenda/bibenda-logo.png'
+import bibendaLogo from '../../assets/succesStory/bibenda/bibenda-logo1.png'
 
 
 const SuccesStory = () => {
