@@ -139,14 +139,13 @@
             padding-right: 100px;
             max-width: 755px;
             align-items: flex-start;
-
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
         }
 
-        @include for-large-desktop {
+        @media screen and (min-width: 1060px) {
             margin: 0 auto;
-            max-width: 1115px
+            max-width: 1115px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .circle-container {
