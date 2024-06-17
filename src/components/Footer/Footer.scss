@@ -102,6 +102,17 @@
         align-items: center;
         padding-block: 30px;
 
+        @include for-desktop {
+            max-width: 700px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include for-large-desktop {
+            padding-inline: 40px;
+            max-width: 1050px;
+        }
+
         &-logo {
             width: auto;
             height: auto;
@@ -122,6 +133,14 @@
             p:nth-child(3) {
                 font-weight: 400;
             }
+
+            @include for-desktop {
+                padding-inline: 20px;
+                font-size: 14px;
+                text-align: start;
+                letter-spacing: 5.32px;
+                line-height: 20px;
+            }
         }
 
         &-button {
@@ -134,6 +153,13 @@
             letter-spacing: 3.8px;
             text-transform: uppercase;
             border: none;
+
+            @include for-desktop {
+                font-size: 14px;
+                text-align: start;
+                letter-spacing: 5.32px;
+                line-height: 20px;
+            }
         }
     }
 }
