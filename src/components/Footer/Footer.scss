@@ -1,0 +1,165 @@
+@import '../../styles/typography';
+@import '../../styles/colors';
+@import '../../styles/z-index';
+@import '../../styles/mediaQueries';
+
+.footer {
+    background-color: map-get($colors, #ffffff );
+    height: auto;
+
+    .cookies {
+        margin: 0 auto;
+        max-width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 15px;
+        flex-wrap: wrap;
+
+        @include for-desktop {
+            max-width: 700px;
+            justify-content: center;
+        }
+
+        @include for-large-desktop {
+            @include max-width-for-large-desktop;
+            max-width: 1150px;
+            flex-wrap: nowrap;
+        }
+
+        &-question {
+            color: map-get($colors, black );
+            padding-left: 35px;
+            max-width: 150px;
+            @include for-desktop {
+                min-width: 400px;
+                max-width: 623px;
+                padding-left: 0px;
+                padding-right: 15px;
+            }
+
+            p{
+                @include md-content;
+                font-weight: 500;
+
+                @include for-desktop {
+                    margin: 0 auto;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: 2.16px;
+                    padding-bottom: 15px;
+                }
+
+                @include for-large-desktop {
+                    padding-top: 10px;
+                    padding-left: 33px;
+                }
+            }
+        }
+
+        &-buttons {
+            padding-right: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-element {
+                width: 53px;
+                height: 53px;
+                border-radius: 50%;
+                border: none;
+                @include md-content;
+                font-weight: 500;
+                text-wrap: nowrap;
+                &:nth-child(1) {
+                    background-color: map-get($colors, gray );
+                    margin-right: 15px;
+                }
+                &:nth-child(2) {
+                    background-color: map-get($colors, black );
+                    color: map-get($colors, beige );
+                }
+
+                @include for-desktop {
+                    border-radius: 29px;
+                    width: 258px;
+                    height: 51px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .footer-info {
+        margin: 0 auto;
+        max-width: 500px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 30px;
+
+        @include for-desktop {
+            max-width: 700px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include for-large-desktop {
+            padding-inline: 40px;
+            max-width: 1050px;
+        }
+
+        &-logo {
+            width: auto;
+            height: auto;
+        }
+
+        &-data {
+            padding-top: 15px;
+            text-align: center;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 3.8px;
+            text-transform: uppercase;
+            p:nth-child(2) {
+                font-weight: 400;
+            }
+            p:nth-child(3) {
+                font-weight: 400;
+            }
+
+            @include for-desktop {
+                padding-inline: 20px;
+                font-size: 14px;
+                text-align: start;
+                letter-spacing: 5.32px;
+                line-height: 20px;
+            }
+        }
+
+        &-button {
+            color: map-get($colors, black );
+            padding-top: 8px;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 3.8px;
+            text-transform: uppercase;
+            border: none;
+
+            @include for-desktop {
+                font-size: 14px;
+                text-align: start;
+                letter-spacing: 5.32px;
+                line-height: 20px;
+            }
+        }
+    }
+}
