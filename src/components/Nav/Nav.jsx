@@ -93,42 +93,54 @@ const Nav = () => {
         <img className='header-logo__desktop' src={mikaLogoDesktop} alt='background-vector' onClick={navigateHome}/>
         <nav className="nav-container" ref={navRef}>
             <ul className="nav-list">
-                {NavList.map((item, index) => (
-                    <li className="nav-list__element" key={index}>
+            {NavList.map((item, index) => (
+                <li className="nav-list__element" key={index}>
+                    {item.element === 'oferta' ? (
+                        <a
+                            href="#"
+                            className={isOfferClicked ? 'active' : ''}
+                            onClick={(e) => {
+                                e.preventDefault(); // Wyłącz domyślne działanie linku
+                                handleClick();
+                            }}
+                        >
+                            {item.element}
+                        </a>
+                    ) : (
                         <NavLink
                             to={item.adress}
                             className={({ isActive }) => 
-                                (isActive && item.element !== 'oferta' ? 'active' : '') + 
+                                (isActive ? 'active' : '') + 
                                 ((isOfferClicked || isOfferActive) && item.element === 'oferta' ? ' active' : '')
-                        }
+                            }
                             onClick={() => {
-                                if (item.element === 'oferta') {
-                                    handleClick();
-                                } else {
+                                if (item.element !== 'oferta') {
                                     setIsOfferClicked(false);
                                     setIsOfferActive(false);
                                     menuTranformation();
                                     showNavbar();
                                 }
                             }}
-                        >{item.element}
+                        >
+                            {item.element}
                         </NavLink>
-                        {isOfferClicked && item.element === 'oferta' && (
+                    )}
+                    {isOfferClicked && item.element === 'oferta' && (
                         <div className="offer-container">
-                            {OfferContent.map((item, index) => (
+                            {OfferContent.map((subItem, subIndex) => (
                                 <NavLink 
-                                    to={item.adress}
+                                    to={subItem.adress}
                                     className='offer-container__element' 
-                                    key={index}
+                                    key={subIndex}
                                     onClick={handleOfferElementClick}
-                                >{item.element}
+                                >
+                                    {subItem.element}
                                 </NavLink>
                             ))}
                         </div>
-                        )}
-                    </li>
-                ))
-                }
+                    )}
+                </li>
+            ))}
             </ul>
             <VectorBg className='bg-vector'/>
         </nav>
