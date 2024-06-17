@@ -22,7 +22,7 @@
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         &-title {
@@ -76,7 +76,7 @@
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         .card {
@@ -109,7 +109,8 @@
     
                 @include for-desktop {
                     height: 126px;
-                    width: 430px;
+                    width: 438px;
+                    max-width: 438px;
                 }
     
                 &-content {
@@ -118,6 +119,10 @@
                     padding-inline: 30px;
                     text-align: center;
                     color: map-get($colors, beige );
+
+                    @include for-desktop {
+                        padding-inline: 45px;
+                    }
                 }
             }
         }

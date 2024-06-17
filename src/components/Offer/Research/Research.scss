@@ -25,7 +25,7 @@
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         &-title {
@@ -98,7 +98,7 @@
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         p {
@@ -139,14 +139,13 @@
             padding-right: 100px;
             max-width: 755px;
             align-items: flex-start;
-
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
         }
 
-        @include for-large-desktop {
+        @media screen and (min-width: 1060px) {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .circle-container {
@@ -209,7 +208,7 @@
                 padding-top: 0px;
             }
 
-            .circle {
+            .round {
                 width: 138px;
                 height: 138px;
                 border-radius: 50%;
@@ -221,7 +220,7 @@
                 }
     
                 img {
-                    width: 209px;
+                    width: 100%;
                     height: auto;
                 }
             }

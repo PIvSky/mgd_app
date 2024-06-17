@@ -13,6 +13,7 @@
         padding: 25px 38px;
         padding-bottom: 0px;
         max-width: 450px;
+        position: relative;
 
         @include for-desktop {
             margin: 0;
@@ -23,7 +24,7 @@
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         &-title {

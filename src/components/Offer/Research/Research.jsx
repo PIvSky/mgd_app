@@ -41,8 +41,8 @@ const Research = () => {
                 </div>
                 <div className='pic-container'>
                     {data.pic.map((element, index) => (
-                        <div className='circle' key={index}>
-                            <img className='circle-img' src={element} alt='pic' />
+                        <div className='round' key={index}>
+                            <img className='round-img' src={element} alt='pic' />
                         </div>
                     ))}
                 </div>
