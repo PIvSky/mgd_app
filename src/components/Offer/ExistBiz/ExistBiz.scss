@@ -22,7 +22,7 @@
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         .title {
@@ -113,7 +113,7 @@
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         &-title {
@@ -226,24 +226,20 @@
         max-width: 450px;
 
         @include for-desktop {
-            padding: 62px 100px 70px 48px;
+            padding: 50px 100px 70px 102px;
             max-width: 755px;
             position: relative;
         }
 
         @include for-large-desktop {
             margin: 0 auto;
-            max-width: 1115px
+            @include max-width-for-large-desktop;
         }
 
         .subtitle {
             display: flex;
             flex-direction: row;
             padding-top: 20px;
-
-            @include for-desktop {
-                padding-left: 78px;
-            }
 
             p {
                 @include md-content;
@@ -259,7 +255,8 @@
             padding-left: 50px;
 
             @include for-desktop {
-                padding-left: 160px;
+                padding-top: 20px;
+                padding-left: 120px;
                 padding-bottom: 20px;
             }
         }
@@ -269,7 +266,7 @@
 
             @include for-desktop {
                 padding-top: 0px;
-                padding-left: 198px;
+                padding-left: 158px;
             }
 
             ul {
