@@ -16,7 +16,7 @@ const Footer = () => {
             {changeContent ? (
             <div className='cookies'>
                 <div className='cookies-question'>
-                    <p>Używamy cookies,<br></br> daj znać,<br></br> czy jesteś z tym ok!</p>
+                    <p>Używamy cookies, daj znać, czy jesteś z tym ok!</p>
                 </div>
                 <div className='cookies-buttons'>
                     <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Nie Ok</button>
