@@ -107,12 +107,12 @@
     
         .home-desktop {
             margin: 0 auto;
-            max-width: 1300px;
+            max-width:  915px;
             display: block;
             position: relative;
     
             .home-grid {
-                overflow: hidden;
+                // overflow: hidden;
                 position: relative;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -125,10 +125,6 @@
                     grid-area: 1 / 1 / 2 / 2;
                     max-width: 443px;
                     padding: 36px 0px 0px 32px;
-    
-                    @media screen and (min-width: 875px) {
-                        padding: 36px 0px 0px 102px;
-                    }
                     &__element {
                         @include md-content;
                         font-size: 16px;
@@ -154,10 +150,7 @@
                     flex-direction: column;
                     margin: 0 auto;
                     margin-right: 32px;
-    
-                    @media screen and (min-width: 875px) {
-                        margin-right: 127px;
-                    }
+
                     p {
                         font-size: 14px;
                         @include content-regular;
@@ -187,11 +180,13 @@
                     width: 367px;
                     height: 367px;
                     border-radius: 50%;
+                    top: 0px;
                     bottom: -100px;
                     left: 32px;
                     background-color: map-get($colors , violet );
-                    @media screen and (min-width: 875px) {
-                        left: 74px
+
+                    @media screen and (min-width: 1060px) {
+                        left: -30px
                     }
                 }
     
