@@ -52,13 +52,48 @@
         }
     }
 
-    .contact {
+    .footer-info {
         margin: 0 auto;
         max-width: 500px;
+        height: auto;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding-block: 15px;
+        padding-block: 30px;
+
+        &-logo {
+            width: auto;
+            height: auto;
+        }
+
+        &-data {
+            padding-top: 15px;
+            text-align: center;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 3.8px;
+            text-transform: uppercase;
+            p:nth-child(2) {
+                font-weight: 400;
+            }
+            p:nth-child(3) {
+                font-weight: 400;
+            }
+        }
+
+        &-button {
+            color: map-get($colors, black );
+            padding-top: 8px;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 3.8px;
+            text-transform: uppercase;
+            border: none;
+        }
     }
 }
