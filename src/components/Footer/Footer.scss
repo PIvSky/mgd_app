@@ -153,6 +153,7 @@
             letter-spacing: 3.8px;
             text-transform: uppercase;
             border: none;
+            cursor: pointer;
 
             @include for-desktop {
                 font-size: 14px;

@@ -1,14 +1,28 @@
-import { useState } from 'react';
+import { useState, useRef} from 'react';
 import './Footer.scss';
 import logoImg from '../../assets/logo/mika-logo-desktop.png';
+import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
 
 const Footer = () => {
 
     const [changeContent, setChangeContent] = useState(true);
+    const dialogRef = useRef(null);
 
     const handleAcceptCookies = () => {
         setChangeContent(false);
       };
+
+      const openModal = () => {
+        if (dialogRef.current) {
+            dialogRef.current.showModal();
+        }
+    }
+
+    const closeModal = () => {
+        if (dialogRef.current) {
+            dialogRef.current.close();
+        }
+    }
 
 
     return (
@@ -31,9 +45,10 @@ const Footer = () => {
                     <p>krzysztofmika@gmail.com</p>
                     <p>+48 904 049 049</p>
                 </div>
-                <button className='footer-info-button'>polityka <br></br>prywatności</button>
+                <button onClick={openModal} className='footer-info-button'>polityka <br></br>prywatności</button>
             </div>
             )}
+            <PrivacyPolicy closeModal={closeModal} dialogRef={dialogRef}/>
         </div>
     )
 }
