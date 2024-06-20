@@ -51,8 +51,8 @@ const Nav = () => {
             adress: '/offer'
         },
         { 
-            element: 'succes story',
-            adress: '/succes-story'
+            element: 'success story',
+            adress: '/success-story'
         },
         { 
             element: 'blog',
