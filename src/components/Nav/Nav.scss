@@ -205,10 +205,10 @@ SMALL SCREEN
         width: 95vw;
         display: flex;
 
-        // @media screen and (min-width: 1900px) {
-        //     max-width: 1900px;
-        //     margin: 0 auto;
-        // }
+        @media screen and (min-width: 1900px) {
+            max-width: 1900px;
+            margin: 0 auto;
+        }
         
 
         &-logo__mobile {
