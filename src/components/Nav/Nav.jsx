@@ -4,7 +4,7 @@ import './Nav.scss'
 // image imports
 import VectorBg from '../Assets/VectorBg/VectorBg';
 import mikaLogoMobile from '../../assets/logo/mika-logo-mobile.svg';
-import mikaLogoDesktop from '../../assets/logo/mika-logo-desktop.png';
+import mikaLogoDesktop from '../../assets/logo/mika-logo-desktop.svg';
 
 const Nav = () => {
 
