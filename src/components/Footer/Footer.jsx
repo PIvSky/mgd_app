@@ -29,12 +29,14 @@ const Footer = () => {
         <div className="footer">
             {changeContent ? (
             <div className='cookies'>
-                <div className='cookies-question'>
-                    <p>Używamy cookies, daj znać, czy jesteś z tym ok!</p>
-                </div>
-                <div className='cookies-buttons'>
-                    <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Nie Ok</button>
-                    <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Ok</button>
+                <div className='cookies-wrapper'>
+                    <div className='cookies-question'>
+                        <p>Używamy cookies, daj znać, czy jesteś z tym ok!</p>
+                    </div>
+                    <div className='cookies-buttons'>
+                        <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Nie Ok</button>
+                        <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Ok</button>
+                    </div>
                 </div>
             </div>
             ) : (
