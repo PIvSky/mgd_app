@@ -4,92 +4,107 @@
 @import '../../styles/mediaQueries';
 
 .footer {
-    background-color: map-get($colors, #ffffff );
+    background-color: map-get($colors, white );
     height: auto;
+    margin-top: auto;
 
     .cookies {
-        margin: 0 auto;
-        max-width: 500px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: map-get($colors, white );
         padding-block: 15px;
         flex-wrap: wrap;
 
-        @include for-desktop {
-            max-width: 700px;
-            justify-content: center;
-        }
-
-        @include for-large-desktop {
-            @include max-width-for-large-desktop;
-            max-width: 1150px;
-            flex-wrap: nowrap;
-        }
-
-        &-question {
-            color: map-get($colors, black );
-            padding-left: 35px;
-            max-width: 150px;
-            @include for-desktop {
-                min-width: 400px;
-                max-width: 623px;
-                padding-left: 0px;
-                padding-right: 15px;
-            }
-
-            p{
-                @include md-content;
-                font-weight: 500;
-
-                @include for-desktop {
-                    margin: 0 auto;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                    letter-spacing: 2.16px;
-                    padding-bottom: 15px;
-                }
-
-                @include for-large-desktop {
-                    padding-top: 10px;
-                    padding-left: 33px;
-                }
-            }
-        }
-
-        &-buttons {
-            padding-right: 35px;
+        .cookies-wrapper {
+            margin: 0 auto;        
+            max-width: 500px;
             display: flex;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            &-element {
-                width: 53px;
-                height: 53px;
-                border-radius: 50%;
-                border: none;
-                @include md-content;
-                font-weight: 500;
-                text-wrap: nowrap;
-                &:nth-child(1) {
-                    background-color: map-get($colors, gray );
-                    margin-right: 15px;
-                }
-                &:nth-child(2) {
-                    background-color: map-get($colors, black );
-                    color: map-get($colors, beige );
-                }
 
+            @include for-desktop {
+                max-width: 700px;
+                justify-content: center;
+            }
+    
+            @include for-large-desktop {
+                @include max-width-for-large-desktop;
+                max-width: 1150px;
+                flex-wrap: nowrap;
+            }
+
+            .cookies-question {
+                color: map-get($colors, black );
+                padding-left: 35px;
+                max-width: 150px;
                 @include for-desktop {
-                    border-radius: 29px;
-                    width: 258px;
-                    height: 51px;
-                    font-size: 14px;
+                    min-width: 400px;
+                    max-width: 623px;
+                    padding-left: 0px;
+                    padding-right: 15px;
+                }
+    
+                p{
+                    @include md-content;
+                    font-weight: 500;
+    
+                    @include for-desktop {
+                        margin: 0 auto;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: 2.16px;
+                        padding-bottom: 15px;
+                    }
+    
+                    @include for-large-desktop {
+                        padding-top: 10px;
+                        padding-left: 33px;
+                    }
+                }
+            }
+    
+            .cookies-buttons {
+                padding-right: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &-element {
+                    width: 53px;
+                    height: 53px;
+                    border-radius: 50%;
+                    border: none;
+                    @include md-content;
+                    font-weight: 500;
+                    text-wrap: nowrap;
+                    &:nth-child(1) {
+                        background-color: map-get($colors, gray );
+                        margin-right: 15px;
+                    }
+                    &:nth-child(2) {
+                        background-color: map-get($colors, black );
+                        color: map-get($colors, beige );
+                    }
+    
+                    @include for-desktop {
+                        border-radius: 29px;
+                        width: 158px;
+                        height: 51px;
+                        font-size: 14px;
+                    }
+
+                    @include for-large-desktop {
+                        width: 258px;
+                    }
                 }
             }
         }
+
+        
     }
 
     .footer-info {

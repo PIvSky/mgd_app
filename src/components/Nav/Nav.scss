@@ -204,6 +204,13 @@ SMALL SCREEN
         position: relative;
         width: 95vw;
         display: flex;
+
+        @media screen and (min-width: 1900px) {
+            max-width: 1900px;
+            margin: 0 auto;
+        }
+        
+
         &-logo__mobile {
             display: none;
         }
@@ -250,16 +257,24 @@ SMALL SCREEN
 
                 .offer-container {
                     position: absolute;
-                    right: -60px;
+                    right: -50px;
                     top: 51px;
                     z-index: 100;
 
                     @media screen and (min-width: 881px) {
-                        right: 20px;
+                        right: -93px;
+                    }
+
+                    @media screen and (min-width: 887px) {
+                        right: -35px;
                     }
 
                     @media screen and (min-width: 981px) {
-                        right: 14px;
+                        right: -54px;
+                    }
+
+                    @media screen and (min-width: 991px) {
+                        right: 24px;
                     }
 
 

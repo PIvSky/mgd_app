@@ -29,12 +29,14 @@ const Footer = () => {
         <div className="footer">
             {changeContent ? (
             <div className='cookies'>
-                <div className='cookies-question'>
-                    <p>Używamy cookies, daj znać, czy jesteś z tym ok!</p>
-                </div>
-                <div className='cookies-buttons'>
-                    <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Nie Ok</button>
-                    <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Ok</button>
+                <div className='cookies-wrapper'>
+                    <div className='cookies-question'>
+                        <p>Używamy cookies, daj znać, czy jesteś z tym ok!</p>
+                    </div>
+                    <div className='cookies-buttons'>
+                        <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Nie Ok</button>
+                        <button className='cookies-buttons-element' onClick={handleAcceptCookies}>Ok</button>
+                    </div>
                 </div>
             </div>
             ) : (
@@ -42,7 +44,7 @@ const Footer = () => {
                 <img className='footer-info-logo' src={logoImg} alt='logo-img'/>
                 <div className='footer-info-data'>
                     <p>KONTAKT</p>
-                    <p>krzysztofmika@gmail.com</p>
+                    <p>kontakt@krzysztofmika.pl</p>
                     <p>+48 904 049 049</p>
                 </div>
                 <button onClick={openModal} className='footer-info-button'>polityka <br></br>prywatności</button>

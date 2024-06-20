@@ -4,7 +4,7 @@ import './Nav.scss'
 // image imports
 import VectorBg from '../Assets/VectorBg/VectorBg';
 import mikaLogoMobile from '../../assets/logo/mika-logo-mobile.svg';
-import mikaLogoDesktop from '../../assets/logo/mika-logo-desktop.png';
+import mikaLogoDesktop from '../../assets/logo/mika-logo-desktop.svg';
 
 const Nav = () => {
 
@@ -20,7 +20,7 @@ const Nav = () => {
     }
 
     const handleClick = () => {
-        setIsOfferClicked(true);
+        setIsOfferClicked(!isOfferClicked);
     };
 
     const handleOfferElementClick = () => {
@@ -32,6 +32,7 @@ const Nav = () => {
 
     const navigateHome = () => {
         navigate('/');
+        setIsOfferClicked(false);
     }
 
     const showNavbar = () => {
@@ -51,8 +52,8 @@ const Nav = () => {
             adress: '/offer'
         },
         { 
-            element: 'succes story',
-            adress: '/succes-story'
+            element: 'success story',
+            adress: '/success-story'
         },
         { 
             element: 'blog',
