@@ -32,6 +32,7 @@ const Nav = () => {
 
     const navigateHome = () => {
         navigate('/');
+        setIsOfferClicked(false);
     }
 
     const showNavbar = () => {
