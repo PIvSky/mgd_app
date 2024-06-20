@@ -30,7 +30,7 @@ const websiteRoutes = createBrowserRouter([
       { path: '/offer/modern-business-tools', element: <BizTools />},
       { path: '/offer/market-research', element: <Research />},
       { path: '/offer/project-manager', element: <ProjectMan />},
-      { path: '/succes-story', element: <SuccesStory/>},
+      { path: '/success-story', element: <SuccesStory/>},
       { path: '/blog', element: <Blog/>},
       { path: '/contact', element: <Contact/>}
     ],

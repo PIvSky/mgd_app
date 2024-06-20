@@ -20,7 +20,7 @@ const Nav = () => {
     }
 
     const handleClick = () => {
-        setIsOfferClicked(true);
+        setIsOfferClicked(!isOfferClicked);
     };
 
     const handleOfferElementClick = () => {
