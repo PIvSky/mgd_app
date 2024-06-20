@@ -12,8 +12,8 @@ import BizTools from './components/Offer/BizTools/BizTools';
 import ExistBiz from './components/Offer/ExistBiz/ExistBiz';
 import Research from './components/Offer/Research/Research';
 import ProjectMan from './components/Offer/ProjectMan/ProjctMan';
+import Footer from './components/Footer/Footer';
 // styles
-
 import './App.scss'
 
 const websiteRoutes = createBrowserRouter([
@@ -40,9 +40,10 @@ const websiteRoutes = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <div className='app'>
       <RouterProvider router={websiteRoutes}></RouterProvider>
-    </>
+      <Footer />
+    </div>
   );
 }
 
