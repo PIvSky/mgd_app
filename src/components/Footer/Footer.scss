@@ -81,6 +81,7 @@
                     @include md-content;
                     font-weight: 500;
                     text-wrap: nowrap;
+                    text-align: center;
                     &:nth-child(1) {
                         background-color: map-get($colors, gray );
                         margin-right: 15px;
