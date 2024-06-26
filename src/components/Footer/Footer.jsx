@@ -45,7 +45,7 @@ const Footer = () => {
                 <div className='footer-info-data'>
                     <p>KONTAKT</p>
                     <p>kontakt@krzysztofmika.pl</p>
-                    <p>+48 904 049 049</p>
+                    <p>+48 793 400 067</p>
                 </div>
                 <button onClick={openModal} className='footer-info-button'>polityka <br></br>prywatności</button>
             </div>
