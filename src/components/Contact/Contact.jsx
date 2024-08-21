@@ -6,7 +6,7 @@ const Contact = () => {
     const data = {
         title: 'Skontaktuj się z nami już dziś!',
         phoneNumber: '+ 48 793 400 067',
-        emailAdress: 'kontakt@krzysztofmika.pl'
+        emailAdress: 'biuro@krzysztofmika.pl'
     }
 
     return (
