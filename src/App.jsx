@@ -14,7 +14,6 @@ import Research from './components/Offer/Research/Research';
 import ProjectMan from './components/Offer/ProjectMan/ProjctMan';
 import Footer from './components/Footer/Footer';
 // styles
-
 import './App.scss'
 
 const websiteRoutes = createBrowserRouter([
@@ -30,7 +29,7 @@ const websiteRoutes = createBrowserRouter([
       { path: '/offer/modern-business-tools', element: <BizTools />},
       { path: '/offer/market-research', element: <Research />},
       { path: '/offer/project-manager', element: <ProjectMan />},
-      { path: '/succes-story', element: <SuccesStory/>},
+      { path: '/success-story', element: <SuccesStory/>},
       { path: '/blog', element: <Blog/>},
       { path: '/contact', element: <Contact/>}
     ],
@@ -41,9 +40,10 @@ const websiteRoutes = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <div className='app'>
       <RouterProvider router={websiteRoutes}></RouterProvider>
-    </>
+      <Footer />
+    </div>
   );
 }
 

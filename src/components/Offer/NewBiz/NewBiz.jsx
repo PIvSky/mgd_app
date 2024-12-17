@@ -47,7 +47,7 @@ const NewBiz = () => {
     ];
 
     const report = {
-        title: 'Po zakończonym procesie otrzymasz pełny raport wraz z komentarzamiekspertów:',
+        title: 'Po zakończonym procesie otrzymasz pełny raport wraz z komentarzami ekspertów:',
         subtitleOne : 'Jakie korzyści funkcjonalne i pozafunkcjonalne otrzymasz współpracując z nami:',
         listOne : [
             'Optymalizacja budżetów otwarciowych',

@@ -4,9 +4,9 @@ import logo1 from '../../assets/about/logo/addcontrolling.svg';
 import logo2 from '../../assets/about/logo/kadromierz.svg';
 import logo3 from '../../assets/about/logo/gopos.png';
 import logo4 from '../../assets/about/logo/bp.png';
-import person1 from '../../assets/about/people/people.png';
-import person2 from '../../assets/about/people/people.png';
-import person3 from '../../assets/about/people/people.png';
+// import person1 from '../../assets/about/people/people.png';
+// import person2 from '../../assets/about/people/people.png';
+// import person3 from '../../assets/about/people/people.png';
 import VectorBg from '../Assets/VectorBg/VectorBg';
 
 const About = () => {
@@ -28,20 +28,20 @@ const About = () => {
 
     const aboutPartnersLogos = [logo1, logo2, logo3, logo4];
 
-    const aboutPeoplePhoto = [
-        {
-            src: person1,
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        },
-        {
-            src: person2,
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        },
-        {
-            src: person3,
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        }
-    ];
+    // const aboutPeoplePhoto = [
+    //     {
+    //         src: person1,
+    //         text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+    //     },
+    //     {
+    //         src: person2,
+    //         text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+    //     },
+    //     {
+    //         src: person3,
+    //         text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+    //     }
+    // ];
 
     return (
         <div className='about'>
@@ -81,14 +81,14 @@ const About = () => {
                     </div> 
                 </div>
                 <div className='bio-partners'>
-                    <h4 className='partners-subtitle'>partnerzy merytoryczni</h4>
+                    <h4 className='partners-subtitle'>partnerzy technologiczni</h4>
                     <div className='partners-container'>
                         {aboutPartnersLogos.map((item, index) => (
                             <img src={item} className='partner-logo' alt='logo-pic' key={index}></img>
                         ))}
                     </div>     
                 </div>
-                <div className='bio-people'>
+                {/* <div className='bio-people'>
                     <h4 className='people-subtitle'>partnerzy merytoryczni</h4>
                     <div className='people-container'>
                         {aboutPeoplePhoto.map((item, index) => (
@@ -100,7 +100,7 @@ const About = () => {
                             </div>
                         ))}
                     </div>     
-                </div>
+                </div> */}
             </div>
             <VectorBg className='bg-vector'/>
         </div>
